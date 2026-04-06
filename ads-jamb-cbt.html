@@ -1,3 +1,4 @@
+
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE html>
 <html b:version='2' class='v2' expr:dir='data:blog.languageDirection' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
@@ -317,7 +318,7 @@ body,html{
 width: 100%;
 margin: 0;
 font-family: 'Montserrat', sans-serif;
-background: #000000;
+background: #2980B9;
 color:#6e34abed;
 }
 /*clearfix*/
@@ -391,7 +392,7 @@ text-align: center;
 padding: 15px 3px;
 border-radius: 4px;
 background-color: #ffffff;
-color: #000000;
+color: #2980B9;
 }
 #logo{
 width: 220px;
@@ -417,7 +418,7 @@ margin-left: 3px;
 }
 .small_headlines{
 font-size: 16px;
-color: #000000ed;
+color: #2980B9ed;
 font-weight: 400;
 padding-bottom: 10px;
 }
@@ -844,7 +845,7 @@ padding-left: 2px
 height: 40px;
 }
 .gutschein {
-background-color: #000000;
+background-color: #2980B9;
 border-radius: 10px;
 padding:10px;
 font-weight: bold;
@@ -914,8 +915,8 @@ text-decoration: none;
 <!-- content -->
 <div class="content-middle">
 <div class="content-inner">
-<p class="headline" style="color:#000000;">
-<img src="https://th.bing.com/th/id/OIP.xh5dX_mL52eD-UOmUMORAgHaEL?rs=1&amp;pid=ImgDetMain" width="100%"><br><strong> <font color="#2980B9">JAMB CBT TEST 2026</font></strong><br>
+<p class="headline" style="color:#2980B9;">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjsuZr6pfXc4adgSYOqPv0HuVfICHsGedosa_9JQgmWTsLqJr-XXFLO1F4qQ5qMfL5VItoS2_qDuKRGjLGx_oT-jstKyKNsXNUwjA6ccRN0rRkoCwBEvZ8KVUiwcxCX93lM6T6ZiVewmFcaW8DDKQb5ThUnxQbcHGe8-9g2l_ESVgHW_teN1LfTyxgizxw/s1536/jamb%20cbt%202026.png" width="100%"><br><strong> <font color="#2980B9">JAMB CBT TEST 2026</font></strong><br>
 
 Use of English - Jamb CBT<br>
   
@@ -954,64 +955,100 @@ Choose the option that best completes the gap(s).
 <div class="ans-box">
 <div class="answer anses1">
 <p>
+	<label>
+<input type="radio" name="question1">
   small boys
+	</label>
 </p>
 </div>
 <div class="answer anses1">
 <p>
+	<label>
+<input type="radio" name="question1">
   unimportant people
+	</label>
 </p>
 </div>
 <div class="answer anses1">
 <p>
+	<label>
+<input type="radio" name="question1">
   frightened people
+	</label>
 </p>
 </div>
 <div class="answer anses1">
 <p>
+	<label>
+<input type="radio" name="question1">
   frivolous people
+	</label>
 </p>
 </div>  
 <div class="answer anses2">
 <p>
+	<label>
+<input type="radio" name="question1">
 could not
+	</label>
 </p>
 </div>
   <div class="answer anses2">
 <p>
+	<label>
+<input type="radio" name="question1">
 was not able to
+	</label>
 </p>
 </div>
   
 <div class="answer anses2">
 <p>
+	<label>
+<input type="radio" name="question1">
 is not able to
+	</label>
 </p>
 </div>
   <div class="answer anses2">
 <p>
+	<label>
+<input type="radio" name="question1">
 cannot be able to
+	</label>
 </p>
 </div>
   
 <div class="answer anses3">
 <p>
+	<label>
+<input type="radio" name="question1">
 return
+	</label>
 </p>
 </div>
 <div class="answer anses3">
 <p>
+	<label>
+<input type="radio" name="question1">
 sight
+	</label>
 </p>
 </div>
   <div class="answer anses3">
 <p>
+	<label>
+<input type="radio" name="question1">
 birth
+	</label>
 </p>
 </div>
   <div class="answer anses3">
 <p>
+	<label>
+<input type="radio" name="question1">
 event
+	</label>
 </p>
 </div>
   </div>
@@ -1301,11 +1338,92 @@ Like
 <br/>
 
 
+<div class="active-box">
+    <span class="pulse"></span>
+    <div class="active-text">
+        <strong> Online Now</strong><br>
+        <span id="countdowntimer">98,542</span><br>
+        <small>Jambites Currently Practicing</small>
+    </div>
+</div>
 
+<style>
+.active-box{
+    max-width:420px;
+    margin:25px auto;
+    padding:18px 22px;
+    display:flex;
+    align-items:center;
+    gap:14px;
+  background: linear-gradient(135deg, #097969, #20e3b2);
+    color:#fff;
+
+    border-radius:16px;
+    box-shadow:0 10px 25px rgba(0,0,0,0.25);
+    font-family:Arial, sans-serif;
+}
+
+/* PULSE DOT */
+.pulse{
+    width:14px;
+    height:14px;
+    background:#ff3b3b;
+    border-radius:50%;
+    position:relative;
+}
+
+.pulse::after{
+    content:"";
+    position:absolute;
+    inset:0;
+    border-radius:50%;
+    background:rgba(255,59,59,0.6);
+    animation:pulse 1.5s infinite;
+}
+
+@keyframes pulse{
+    0%{transform:scale(1);opacity:1}
+    100%{transform:scale(2.5);opacity:0}
+}
+
+/* TEXT */
+.active-text{
+    line-height:1.3;
+}
+
+.active-text strong{
+    font-size:16px;
+    font-weight:800;
+}
+
+#countdowntimer{
+    display:block;
+    font-size:28px;
+    font-weight:900;
+    color:#FFD700;
+}
+
+.active-text small{
+    font-size:13px;
+    opacity:.9;
+}
+</style>
+
+<script>
+var timeleft = 98542;
+
+setInterval(function(){
+    // Add random users to simulate activity
+    timeleft = timeleft + Math.floor(Math.random() * 600);
+
+    document.getElementById("countdowntimer").textContent =
+        timeleft.toLocaleString();
+}, 1000);
+</script>
 
 <center>
   <strong> <font color="white">SPONSORED CARD</font></strong><br>
-<img src="https://jamb-2026-cbt-test.jambinfo.com/cbt/cbt-test/jamb-logo.jpg" width="350">
+<img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhkRK7s0irmTMAb8oQwY-8w7pqR5UqwUAKiiIEIgsYmmu5TawItRkenYepzX7aOM1i1KlqYlVGsDJ_3Ogb4NLDnaIVS-XVzJj9xGemjF8gxha2K4cpn9fgfdAaLqYEy61sF3pOt2g27diG3NZ35zPOagn1Y6KVHybRY9_oELW7Mvnz4nUOj9cG1LSW5rumt/s325/33B287D0-1D6F-455E-A8E4-67057BD2ECC2.png" width="350">
 
   </center>
 <div>
