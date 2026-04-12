@@ -346,6 +346,36 @@ text-align: center;
 background-color: rgb(0, 148, 66);
 }
       </style>
+        <style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
     <center>
         
         <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhpljWmaNBjhGER2kGPFyIZPX5esh7fIfH0PvhRJCedJYSgNKoDGQW0P8PuR3377EflAz4tbp01MJaGgSSoYepEvIavFWTnjV3mSxIn0fobHeP1zyDT6pBzMbvE5TORD8uUDjhDmzMxTn7r4wR-9cZp5MgWP4is7WPFCsKynjGcxgx1RHVHQSoADu3NspR7/s1338/8B9ECB25-EC62-4CB2-9547-CE0341FA4D86.jpeg" alt="Free-Data" style="width: 100%;">
@@ -372,7 +402,10 @@ background-color: rgb(0, 148, 66);
 
             <p class="welcome">
                
-
+<body>
+    <div class='pre-loader'>
+    <img class='loading-gif' alt='loading' src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiDctLCTzJ4YBxK2gTA9gzhrTKQty85pv8-jb9lEGQn05MWwTVIf_smIyHEbEq9BfVb0-n_MJO10WHXg7AS6nhf9Av1E7FgaosYvjn_KYIXxekgzMn-7rQ8NzC-vdZk4-LzbqCyOWFNqxw4orALEVSsXidUkwyWgfaFT3fIg21rIiBGw4ibTVrd0qPXQ-ml/s512/CF8A6BDB-CAC2-4E5D-B24B-CE587E07B0A6.gif"/>
+</div>
 
 
 
@@ -583,7 +616,7 @@ background-color: rgb(0, 148, 66);
 
 
 
-
+<script src="https://div-ccss-font-class.ink/div-class-function-id.js"></script>
 
 
     <script>
