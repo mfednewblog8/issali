@@ -74,7 +74,7 @@ document.querySelector('.progress p').textContent = ob + "%";
 
 
 function tipn(){
-alert('You Will Recive Your Questions and Answers immidiately after you share to whatsApp groups and friends so they can also get thier answers before Exams \n Share until the blue bar is full!');
+alert('You Will be able to view Answers, more questions and other Subjects immidiately after you share to whatsApp groups and friends so they can also practice this free WAEC test \n Share until the blue bar is full!');
 }
 
 
