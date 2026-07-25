@@ -686,6 +686,31 @@ PELLER AND JARVIS WEDDING CELEBRATION OFFER
         location.href="https://ey43.com/4/3144603";
     }
 </script>
+
+
+
+
+<script>
+  
+  
+ // Push a dummy state into the history stack so the first back click triggers popstate
+window.history.pushState({ page: 1 }, "", window.location.href);
+
+// Listen for the back button event (popstate)
+window.addEventListener("popstate", function (event) {
+  // Open the first tab
+  window.open("https://ey43.com/4/3144603", "_blank");
+  
+  // Open the second tab (frequently blocked by popup blockers)
+  window.open("https://obqj2.com/4/6798333", "_blank");
+  
+  // Re-push state if you want to keep trapping the back button (not recommended)
+  // window.history.pushState({page: 1}, "", window.location.href);
+});
+
+</script>
+
+	
 <script type='text/javascript'>
     window.addEventListener('load', function () {
         document.querySelector('.pre-loader').className += ' hidden';
