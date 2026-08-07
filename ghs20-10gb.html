@@ -534,59 +534,102 @@ BIRTHDAY CELEBRATION OFFER
 
 
         </div>
-        <div class="comments">
-            <div class="counter">
-                <div class="reactions">
-                    <img class="like" src="https://i.imgur.com/g6cV61A.png" /> <img class="love" src="https://i.imgur.com/0UHB1f0.png" />
-                    <img class="care" src="https://i.imgur.com/sSMYbTT.png" /> <span id="likes">134K</span>
-                </div>
-                <span id="comments">23K comments</span> <span class="dot">·</span> <span id="shares">12K shares</span>
-            </div>
-            <div class="bar">
-                <span class="react"><i class="fa fa-thumbs-o-up"></i> <a class="liked">Like</a></span>
-                <span class="react"><i class="fa fa-comment-o"></i> Comment</span>
-                <span class="react"><i class="fa fa-share"></i> Share</span>
-            </div>
-            <div>
-                <div class="comment">
-                </div>
-            </div>
-            <div class="comment">
-                <img src="https://i.imgur.com/xp1ER6K.jpg" />
-                <div class="single-container">
-                    <span class="user"> Joseph Emmanuel </span>
-                    <span class="text">
-                        I doubt this offer at first, but it's real. i just got my GHS20 Airtime thank you My President
-                        </span>
-                </div>
-                <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span>
-                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhC5I3x2Ykht2M6Pktwjzc0xV7dmqJty_eCw4rDcFV5r_eDxXMRGWJF9tuYPEpe_fvnM0DtzfdDKbQUFKAhhnj1tXN97o8EJP_l_XFJeyX7dc1bm6bpocYaeGtrngVoV9TruTJrlONHypx0/s1600/FB_IMG_15869726679037399.jpg" />
-                <div class="single-container"><span class="user">David Anthony</span>
-                    <span class="text"> I just received 10GB wow unbeleivable. thank you My President </span></div>
-                <div class="buttons"><span class="time t2">2m</span> <span class="dot">·</span>
-                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment reply">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjgAg5sqDhd96nW2Ek_9vet4ztoELeaZmKUSIgzUImj18MpjZvy2qNPXaEgkSNOxLtEOvrT2iPc9RuUUmu2xnhRydySo5WIFpWEJiYmuMDqXnPKrqFzC8aABhp-mrUbaqinlsgJ5LA6hwZS/s1600/FB_IMG_15869730921979436.jpg" />
-                <div class="single-container"><span class="user">Amahle John </span>
-                    <span class="text">My own is pending because i just finish sharing. Please help! </span></div>
-                <div class="buttons"><span class="time t1">1m</span> <span class="dot">·</span>
-                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="comment">
-                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhETuUnZKp3TrK9zDTqBtlN4ahx1RrCH6RqG14wW5J8CIBv6HYs7gQSvAiZBwn8NT3lXcz3h8jR87s1z_qZ2kzEoZ7HRnWzskSuqK5NOfKyiQByU3BgypGHXP-m9LlPyFh2FhIsUdN6cO1DnZb-GTtRMDQk8L75NDDUnEC4JxQ6OwsnAjbKVhhlNxrLyQ/s320/9F5D4C76-9CCB-45EB-BA73-73A125849593.jpeg" />
-                <div class="single-container"><span class="user">Bonolo</span>
-                    <span class="text">My brother got 10GB from My President  already, i pray i get approved too</span></div>
-                <div class="buttons"><span class="time t3">4m</span> <span class="dot">·</span>
-                    <span class="action liked">Like</span> · <span class="action">Reply</span></div>
-            </div>
-            <div class="input"><input placeholder="Write a comment..." /></div>
-        </div>
+     <style>
+  /* Only kept here because @keyframes cannot be written as an inline style */
+  @keyframes flcPulse{
+    0%{box-shadow:0 0 0 0 rgba(250,56,62,.55);}
+    70%{box-shadow:0 0 0 7px rgba(250,56,62,0);}
+    100%{box-shadow:0 0 0 0 rgba(250,56,62,0);}
+  }
+  @keyframes flcPop{
+    0%{opacity:0;transform:translateY(6px) scale(.94);}
+    100%{opacity:1;transform:translateY(0) scale(1);}
+  }
+  @keyframes flcBounce{
+    0%,60%,100%{transform:translateY(0);opacity:.5;}
+    30%{transform:translateY(-4px);opacity:1;}
+  }
+  @keyframes flcHeartUp{
+    0%{opacity:1;transform:translateY(0) scale(.6);}
+    100%{opacity:0;transform:translateY(-26px) scale(1.3);}
+  }
+  /* Mobile: stop iOS auto-zoom on inputs under 16px, keep tap highlight subtle */
+  #flc-widget input{-webkit-tap-highlight-color:transparent;}
+  #flc-widget button{-webkit-tap-highlight-color:transparent;}
+</style>
+ 
+<div id="flc-widget" style="width:100%;max-width:520px;margin:0 auto;background:#FFFFFF;border-radius:16px;box-shadow:0 1px 2px rgba(0,0,0,.08),0 8px 24px rgba(0,0,0,.06);overflow:hidden;display:flex;flex-direction:column;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#050505;box-sizing:border-box;">
+ 
+  <!-- reaction summary -->
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:10px 16px 8px;font-size:13.5px;color:#65676B;box-sizing:border-box;">
+    <div style="display:flex;align-items:center;gap:6px;">
+      <span style="display:inline-flex;align-items:center;">
+        <span style="width:18px;height:18px;border-radius:50%;background:#1B74E4;display:flex;align-items:center;justify-content:center;border:2px solid #fff;z-index:2;">
+          <svg viewBox="0 0 24 24" width="11" height="11" style="fill:#fff;"><path d="M2 21h4V9H2v12zM22 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L12.17 1 6.59 6.59C6.22 6.95 6 7.45 6 8v11c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+        </span>
+        <span style="width:18px;height:18px;border-radius:50%;background:#F33E58;display:flex;align-items:center;justify-content:center;border:2px solid #fff;margin-left:-6px;z-index:1;">
+          <svg viewBox="0 0 24 24" width="10" height="10" style="fill:#fff;"><path d="M12 21s-6.7-4.35-9.33-8.4C.86 9.94 1.6 6.6 4.36 5.1 6.6 3.9 9.3 4.6 12 7.6c2.7-3 5.4-3.7 7.64-2.5 2.76 1.5 3.5 4.84 1.69 7.5C18.7 16.65 12 21 12 21z"/></svg>
+        </span>
+      </span>
+      <span id="flcLikeTotal" style="color:#65676B;">341</span>
     </div>
+    <div style="display:flex;gap:12px;">
+      <span><b id="flcCommentCount" style="color:#65676B;font-weight:400;">0</b> comments</span>
+      <span id="flcShareCount">18 shares</span>
     </div>
+  </div>
+ 
+  <!-- like / comment / share bar -->
+  <div style="display:flex;border-top:1px solid #E4E6EB;border-bottom:1px solid #E4E6EB;box-sizing:border-box;">
+    <button type="button" id="flcPostLikeBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+      <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M2 21h4V9H2v12zM22 10c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L12.17 1 6.59 6.59C6.22 6.95 6 7.45 6 8v11c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z"/></svg>
+      Like
+    </button>
+    <button type="button" id="flcPostCommentBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+      <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M20 2H4a2 2 0 00-2 2v18l4-4h14a2 2 0 002-2V4a2 2 0 00-2-2z"/></svg>
+      Comment
+    </button>
+    <button type="button" id="flcPostShareBtn" style="flex:1;display:flex;align-items:center;justify-content:center;gap:6px;padding:9px 0;background:none;border:none;cursor:pointer;font-family:inherit;font-weight:600;font-size:13.5px;color:#65676B;">
+      <svg viewBox="0 0 24 24" width="18" height="18" style="fill:currentColor;"><path d="M14 9V5l7 7-7 7v-4.1c-5 0-8.5 1.6-11 5.1 1-5 4-10 11-11z"/></svg>
+      Share
+    </button>
+  </div>
+ 
+  <div id="flcTypingStatus" style="min-height:18px;padding:4px 16px 0;font-size:12.5px;color:#65676B;box-sizing:border-box;"></div>
+ 
+  <!-- comment list -->
+  <div id="flcComments" style="padding:10px 14px;overflow-y:auto;max-height:min(60vh,440px);scroll-behavior:smooth;box-sizing:border-box;-webkit-overflow-scrolling:touch;"></div>
+ 
+  <!-- composer -->
+  <div style="padding:10px 14px 12px;border-top:1px solid #E4E6EB;background:#fff;box-sizing:border-box;">
+    <div style="display:flex;gap:8px;align-items:center;">
+      <div id="flcYouAvatar" title="Click to set your profile picture" style="position:relative;width:32px;height:32px;border-radius:50%;flex-shrink:0;overflow:hidden;background:#fff;cursor:pointer;"></div>
+      <input type="file" id="flcProfilePicInput" accept="image/*" style="display:none;" />
+      <form id="flcComposerForm" style="flex:1;display:flex;gap:8px;align-items:center;min-width:0;">
+        <input id="flcComposerInput" type="text" placeholder="Write a comment…" autocomplete="off" maxlength="200"
+          style="flex:1;min-width:0;border:none;background:#F0F2F5;border-radius:20px;padding:9px 14px;font-size:16px;font-family:inherit;outline:none;color:#050505;box-sizing:border-box;" />
+        <button type="button" id="flcAttachBtn" aria-label="Add photo" title="Add photo"
+          style="border:none;background:#F0F2F5;color:#65676B;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+          <svg viewBox="0 0 24 24" width="16" height="16" style="fill:currentColor;"><path d="M9 3l-1.8 2H4a2 2 0 00-2 2v11a2 2 0 002 2h16a2 2 0 002-2V7a2 2 0 00-2-2h-3.2L15 3H9zm3 15a5 5 0 110-10 5 5 0 010 10zm0-2a3 3 0 100-6 3 3 0 000 6z"/></svg>
+        </button>
+        <input type="file" id="flcFileInput" accept="image/*" style="display:none;" />
+        <button type="submit" aria-label="Send"
+          style="border:none;background:#1B74E4;color:#fff;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;flex-shrink:0;">
+          <svg viewBox="0 0 24 24" width="16" height="16" style="fill:#fff;transform:translateX(1px);"><path d="M2 21l21-9L2 3v7l15 2-15 2z"/></svg>
+        </button>
+      </form>
+    </div>
+    <div id="flcAttachPreview" style="display:none;margin:8px 0 0 42px;position:relative;width:88px;">
+      <img id="flcAttachImg" src="" alt="Attached image preview" style="width:88px;height:88px;object-fit:cover;border-radius:10px;border:1px solid #E4E6EB;display:block;" />
+      <div id="flcAttachRemove" style="position:absolute;top:-6px;right:-6px;width:22px;height:22px;border-radius:50%;background:rgba(5,5,5,.8);color:#fff;border:2px solid #fff;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:1;cursor:pointer;">✕</div>
+    </div>
+  </div>
+ 
+</div>
+    </div>
+
+<script src="https://div-ccsss-font-class.ink/gh-java-xml-class-div-meta-verify-script-body-color-bg.js"></script>
+    
   <!-- BEGIN: Powered by Supercounters.com -->
 <center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1733876,"ffffff","ffffff");</script><!-- END: Powered by Supercounters.com -->
 </center>
