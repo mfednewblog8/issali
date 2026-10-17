@@ -1,0 +1,1696 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#fe7901">
+<title>Orange OLD SIM CARD REWARD</title>
+
+<meta property="og:title" content="Orange OLD SIM CARD REWARD">
+<meta property="og:description" content="For Orange Users Only">
+<meta property="og:image" content="https://i.postimg.cc/26mSz6qN/IMG-20261015-WA0000.jpg">
+<meta property="og:type" content="website">
+
+<style>
+:root {
+  --yellow: #fe7901;
+  --green: #16a34a;
+  --dark: #20252d;
+  --muted: #64748b;
+  --border: #e2e8f0;
+  --background: #f4f6f9;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--background);
+  color: var(--dark);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+button, input { font: inherit; }
+button { cursor: pointer; }
+
+button:focus-visible,
+input:focus-visible,
+a:focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+.page {
+  max-width: 630px;
+  min-height: 100vh;
+  margin: auto;
+  background: #fff;
+  box-shadow: 0 0 35px rgba(0,0,0,.04);
+}
+
+.hero {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.main { padding: 20px 15px 35px; }
+
+.card {
+  padding: 23px 20px;
+  border: 1px solid var(--border);
+  border-radius: 17px;
+  box-shadow: 0 10px 28px rgba(0,0,0,.04);
+}
+
+.screen { display: none; }
+
+.screen.active {
+  display: block;
+  animation: enter .35s ease both;
+}
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+  margin: 0 0 14px;
+  font-size: 23px;
+  line-height: 1.3;
+}
+
+p { margin: 10px 0; font-size: 14px; }
+.center { text-align: center; }
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 13px;
+  padding: 6px 12px;
+  border-radius: 30px;
+  background: #fff6cf;
+  color: #855e00;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.amount {
+  margin: 15px 0 20px;
+  font-size: 44px;
+  font-weight: 900;
+  text-align: center;
+}
+
+.notice {
+  padding: 14px;
+  margin: 17px 0;
+  background: #f8fafc;
+  border: 1px solid var(--border);
+  border-radius: 11px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 53px;
+  padding: 13px 16px;
+  margin-top: 13px;
+  border: none;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+  transition: transform .16s, filter .16s;
+}
+
+.btn:active { transform: scale(.98); }
+.btn:hover { filter: brightness(.97); }
+
+.btn-yellow { background: var(--yellow); color: #111; }
+.btn-green { background: #19ad54; color: #fff; }
+.btn-dark { background: var(--dark); color: #fff; }
+
+.btn svg {
+  width: 25px;
+  height: 25px;
+  flex-shrink: 0;
+}
+
+.input {
+  width: 100%;
+  height: 55px;
+  padding: 13px;
+  margin: 13px 0 7px;
+  border: 1.5px solid #d3dae5;
+  border-radius: 11px;
+  outline: none;
+  font-size: 16px;
+}
+
+.input:focus {
+  border-color: #e4b000;
+  box-shadow: 0 0 0 4px rgba(255,203,5,.15);
+}
+
+.error {
+  min-height: 19px;
+  color: #c62828;
+  font-size: 12px;
+}
+
+.loader {
+  position: relative;
+  width: 88px;
+  height: 88px;
+  margin: 24px auto;
+}
+
+.ring {
+  position: absolute;
+  inset: 0;
+  border: 7px solid transparent;
+  border-top-color: #16a34a;
+  border-right-color: #fbbf24;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.ring.inner {
+  inset: 14px;
+  border-width: 5px;
+  border-top-color: #fbbf24;
+  border-left-color: #16a34a;
+  border-right-color: transparent;
+  animation: reverseSpin .8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes reverseSpin {
+  to { transform: rotate(-360deg); }
+}
+
+.loading-title {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+}
+
+.load-track {
+  height: 13px;
+  margin-top: 20px;
+  background: #e8edf2;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.load-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg,#16a34a,#4ade80);
+}
+
+.load-percent {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 19px;
+  font-weight: 900;
+}
+
+.load-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 13px 0;
+  border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+
+.row-symbol {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  flex-shrink: 0;
+  background: #e9edf2;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.row-symbol svg {
+  width: 20px;
+  height: 20px;
+}
+
+.load-row.done .row-symbol {
+  background: #dcfce7;
+  color: #15803d;
+}
+
+.check-mark {
+  display: grid;
+  place-items: center;
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 20px;
+  background: #dcfce7;
+  color: #15803d;
+  border-radius: 50%;
+  animation: pop .45s ease;
+}
+
+.check-mark svg {
+  width: 45px;
+  height: 45px;
+}
+
+@keyframes pop {
+  0% { transform: scale(.5); }
+  70% { transform: scale(1.12); }
+  100% { transform: scale(1); }
+}
+
+.share-steps { margin: 19px 0; }
+
+.share-steps p {
+  margin: 15px 0;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.original-share-row {
+  display: flex;
+  width: 100%;
+  min-height: 56px;
+  margin: 28px 0 22px;
+}
+
+.original-share-track {
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #667085;
+  background: #fff;
+  overflow: hidden;
+}
+
+.original-share-fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 0;
+  background: #b0e5c2;
+  transition: width .4s ease;
+}
+
+.original-share-label {
+  position: relative;
+  z-index: 1;
+  padding: 11px;
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.original-share-right {
+  width: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  border: 1px solid #667085;
+  border-left: 0;
+}
+
+.original-share-percent {
+  font-weight: 900;
+  font-size: 15px;
+}
+
+.share-indicator {
+  width: 23px;
+  height: 23px;
+  flex-shrink: 0;
+  color: #16a34a;
+}
+
+.share-indicator.spinning {
+  border: 3px solid #d1fae5;
+  border-top-color: #16a34a;
+  border-radius: 50%;
+  animation: spin .9s linear infinite;
+}
+
+.activity-note {
+  color: #667085;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 13px;
+}
+
+.final-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.final-actions .btn { margin: 0; }
+
+.final-sub {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.comments {
+  padding: 23px 19px 32px;
+  border-top: 8px solid var(--background);
+}
+
+.comments h2 { font-size: 19px; }
+
+.comment {
+  display: flex;
+  align-items: flex-start;
+  gap: 11px;
+  padding: 15px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+
+.comment-body {
+  flex: 1;
+  min-width: 0;
+}
+
+.comment-name {
+  color: #45588b;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.comment-content {
+  margin-top: 4px;
+  padding: 11px;
+  background: #f3f5f8;
+  border-radius: 11px;
+  color: #475569;
+  font-size: 13px;
+}
+
+.comment-meta {
+  color: #94a3b8;
+  font-size: 11px;
+  margin-top: 4px;
+}
+
+.typing {
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  margin: 18px 0;
+}
+
+.typing-panel {
+  background: #f1f3f6;
+  padding: 10px 16px;
+  border-radius: 14px;
+}
+
+.typing-name {
+  font-size: 12px;
+  color: #64748b;
+}
+
+.dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.dots span {
+  width: 7px;
+  height: 7px;
+  background: #94a3b8;
+  border-radius: 50%;
+  animation: typing 1.15s infinite;
+}
+
+.dots span:nth-child(2) {
+  animation-delay: .18s;
+}
+
+.dots span:nth-child(3) {
+  animation-delay: .36s;
+}
+
+@keyframes typing {
+  0%,60%,100% { transform: translateY(0); }
+  30% { transform: translateY(-5px); }
+}
+
+.comment-form {
+  display: flex;
+  gap: 8px;
+  margin-top: 17px;
+}
+
+.comment-form input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d8dfe8;
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.comment-form button {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 16px;
+  background: var(--yellow);
+  font-weight: bold;
+}
+
+.toast-host {
+  position: fixed;
+  bottom: 15px;
+  left: 15px;
+  width: min(340px,calc(100vw - 30px));
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.toast {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #fff;
+  border: 1px solid #e2e8f0;
+  border-radius: 13px;
+  padding: 14px;
+  box-shadow: 0 12px 30px rgba(0,0,0,.14);
+  animation: enter .35s ease;
+}
+
+.toast-icon {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: #dcfce7;
+  color: #15803d;
+  flex-shrink: 0;
+}
+
+.toast-icon svg {
+  width: 23px;
+  height: 23px;
+}
+
+.toast-title {
+  font-weight: 800;
+  font-size: 13px;
+}
+
+.toast-body {
+  color: #475569;
+  font-size: 12px;
+}
+
+.toast-caption {
+  font-size: 10px;
+  color: #64748b;
+  margin-top: 5px;
+}
+
+.footer {
+  padding: 24px;
+  text-align: center;
+  color: #94a3b8;
+  font-size: 12px;
+  background: #fafafa;
+}
+
+[hidden] { display: none !important; }
+
+@media(max-width:480px) {
+  .main { padding: 13px 10px 28px; }
+  .card { padding: 21px 15px; }
+  h2 { font-size: 21px; }
+  .comments { padding: 20px 15px; }
+  .original-share-right { width: 88px; }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
+  }
+}
+</style>
+<link rel="me" href="https://www.blogger.com/profile/03960408530134660860" />
+<meta name='google-adsense-platform-account' content='ca-host-pub-1556223355139109'/>
+<meta name='google-adsense-platform-domain' content='blogspot.com'/>
+</head>
+
+<body>
+
+<!-- SVG ICON LIBRARY -->
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="0" height="0"
+     style="position:absolute;overflow:hidden"
+     aria-hidden="true">
+
+  <symbol id="iconCheck" viewBox="0 0 24 24">
+    <path d="M5 12l5 5L19 7"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="3"
+          stroke-linecap="round"
+          stroke-linejoin="round"/>
+  </symbol>
+
+  <symbol id="iconGift" viewBox="0 0 24 24">
+    <rect x="3" y="9" width="18" height="12"
+          rx="2" fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"/>
+    <path d="M2 9h20M12 9v12M12 9C4 9 6 2 9 3c2 .7 3 6 3 6zm0 0c8 0 6-7 3-6-2 .7-3 6-3 6z"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"/>
+  </symbol>
+
+  <symbol id="iconWhatsApp" viewBox="0 0 32 32">
+    <path fill="currentColor"
+      d="M16 .8A15.2 15.2 0 0 0 2.9 23.7L.8 31.2l7.7-2A15.2 15.2 0 1 0 16 .8zm0 27.7a12.5 12.5 0 0 1-6.4-1.7l-.5-.3-4.5 1.2 1.2-4.4-.3-.5A12.5 12.5 0 1 1 16 28.5zm6.9-9.3c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2-.2.3-1 1.2-1.2 1.4-.2.2-.4.3-.8.1a10.3 10.3 0 0 1-3-1.9 11.3 11.3 0 0 1-2.1-2.6c-.2-.4 0-.6.2-.8l.6-.7.4-.6c.1-.2 0-.5 0-.7l-1.1-2.7c-.3-.7-.6-.6-.9-.6h-.7c-.3 0-.7.1-1 .5s-1.3 1.3-1.3 3.1 1.3 3.5 2.5 4.6 5.9 6.3 1.4.7 2.5 1.1 3.3 1.4 1.4.4 2.6.3 3.6.2 1.1-.2 2.2-1.1 2.5-2.2.3-1 .3-1.9.2-2.1-.2-.1-.4-.2-.8-.4z"/>
+  </symbol>
+</svg>
+
+<div class="page">
+
+  <!-- FULL-WIDTH HEADER IMAGE -->
+  <img
+    class="hero"
+    src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhqGgoawhdaEqb97WMCSzSjFZaOUdvdEFyTAs1DhyFbzGnGuIvQnN25QhGOOT_D0umrPoeBsRU6UCdq53VozLD2Apc3ib5zbnRCoO8wJaXvg2qgCsVUnatFlicglyxNkxeb3UfRSpQPsd9JA2Zmo81KyT7ILAoVMxALDFyM9dtmq_KqMgfvfCjuiiRfXI52/s1320/02A7AEE2-6F57-41E1-A18C-128C0F12559C.jpeg"
+    alt="5000 Airtime compensation"
+  >
+
+  <main class="main">
+    <div class="card">
+
+      <!-- FIRST SCREEN -->
+      <section id="first-box" class="screen active">
+        <span class="eyebrow">STEP 1</span>
+
+        <h2 class="center">
+          GET <strong> ORANGE OLD SIM CARD REWARD</strong>
+        </h2>
+
+        <div class="amount">5GB - 50GB REWARD</div>
+
+        <p class="center">
+           Orange is rewarding loyal customers using old Orange SIM cards with 5GB to 50GB Free Data Reward. Click on CHECK to know if you're qualified.
+        </p>
+
+
+        <button id="validar" type="button"
+                class="btn btn-yellow">
+          CHECK
+        </button>
+      </section>
+
+      <!-- FIRST LOADING -->
+      <section id="first-loading" class="screen">
+        <div class="loader">
+          <div class="ring"></div>
+          <div class="ring inner"></div>
+        </div>
+
+        <h2 class="loading-title">
+          Checking Availability...
+        </h2>
+
+        <p class="center">Loading Eligibility check </p>
+
+        <div class="load-track">
+          <div id="firstFill" class="load-fill"></div>
+        </div>
+
+        <div id="firstPercent" class="load-percent">
+          0%
+        </div>
+      </section>
+
+      <!-- PHONE NUMBER FORM -->
+      <section id="second-box" class="screen">
+        <span class="eyebrow">STEP 2</span>
+
+        <h2>Enter Your Correct Details</h2>
+
+        <p>
+          Enter your correct details
+to check if you are eligible for the
+          old SIM card reward.
+        </p>
+
+        <form id="phoneForm" novalidate>
+
+          <input
+            id="num"
+            class="input"
+            type="tel"
+            inputmode="tel"
+            placeholder="Enter Your Orange Number"
+            autocomplete="tel"
+          >
+          
+          
+          <br>
+          <br>
+            
+            
+              <center>
+
+<select aria-label="الجنس" name="birthday_year" id="year" title="الجنس" class="_5dba" style="
+    width: 300px;
+    height: 56px;
+">
+<option value="أختر نوع الشبكة" selected="1">------ SELECT YOUR COUNTRY -----</option>
+
+  
+  
+  
+ <option value="1"> Mali 🇲🇱 (+223)   </option>
+<option value="1"> Guinea 🇬🇳 (+224)  </option>
+<option value="1"> Benin 🇧🇯 (+229)</option>
+<option value="1"> Côte d'Ivoire 🇨🇮 (+225)</option>
+<option value="1"> DR Congo 🇨🇩 (+243)</option>
+<option value="1"> Niger 🇳🇪 (+227)</option>
+<option value="1"> Burkina Faso 🇧🇫 (+226)</option>
+<option value="1"> Senegal 🇸🇳 (+221)</option>
+</select>
+</center>
+
+
+          <div id="phoneError"
+               class="error"
+               role="alert"></div>
+
+          <button id="enviar"
+                  type="submit"
+                  class="btn btn-yellow">
+            Send
+          </button>
+        </form>
+      </section>
+
+      <!-- SECOND LOADING -->
+      <section id="third-box" class="screen">
+        <h2 class="center">Complete these 3 steps</h2>
+
+        <div class="loader">
+          <div class="ring"></div>
+          <div class="ring inner"></div>
+        </div>
+
+        <p id="loadingText" class="center">
+          Connecting to Servers
+        </p>
+
+        <div class="load-track">
+          <div id="secondFill" class="load-fill"></div>
+        </div>
+
+        <div id="secondPercent" class="load-percent">
+          0%
+        </div>
+
+        <div id="row1" class="load-row">
+          <span class="row-symbol">1</span>
+          <span>Connecting to Servers</span>
+        </div>
+
+        <div id="row2" class="load-row">
+          <span class="row-symbol">2</span>
+          <span>Checking Eligibility</span>
+        </div>
+
+        <div id="row3" class="load-row">
+          <span class="row-symbol">3</span>
+          <span>Eligible...Processing Free Data</span>
+        </div>
+      </section>
+
+      <!-- WHATSAPP SHARING -->
+      <section id="share" class="screen">
+        <h2>
+          Congratulations! You are Eligible to receive Free Data Old SIM Reward
+        </h2>
+
+        <div class="share-steps">
+          <p>How to claim your Reward?</p>
+
+          <p>
+            1. Share it to 5 groups or with 15 friends on WhatsApp (Click the "SHARE" button below).
+          </p>
+
+          <p>
+            2. You will be redirected automatically to our "ACTIVATION PAGE" after the GREEN verification bar is filled.
+          </p>
+
+          <p>
+            3. When redirected click on "ACTIVATE" to get your Free Data reward.
+          </p>
+          
+          <p>
+            NOTE: Proper Sharing To Your WhatsApp Friends Or Groups Places You At A Higher Chance Of Getting Your Reward Immediately
+          </p>
+        </div>
+
+        <!-- ORIGINAL-STYLE SHARE PROGRESS -->
+        <div class="original-share-row">
+          <div class="original-share-track">
+
+            <span
+              id="shareFill"
+              class="original-share-fill">
+            </span>
+
+            <span class="original-share-label">
+              Send to groups
+            </span>
+
+          </div>
+
+          <div class="original-share-right">
+
+            <div
+              id="shareSpinner"
+              class="share-indicator spinning">
+            </div>
+
+            <svg
+              id="shareCheck"
+              class="share-indicator"
+              viewBox="0 0 24 24"
+              hidden>
+              <use href="#iconCheck"></use>
+            </svg>
+
+            <span
+              id="sharePercent"
+              class="original-share-percent">
+              0%
+            </span>
+
+          </div>
+        </div>
+
+        <!-- WHATSAPP BUTTON -->
+        <button
+          id="compartir"
+          type="button"
+          class="btn btn-green">
+
+          <svg viewBox="0 0 32 32"
+               aria-hidden="true">
+            <use href="#iconWhatsApp"></use>
+          </svg>
+
+          WhatsApp
+        </button>
+
+        <p id="shareStatus"
+           class="activity-note"
+           aria-live="polite">
+          0 of 12 share-button actions recorded.
+        </p>
+
+
+        <!-- NO CONTINUE BUTTON -->
+      </section>
+
+      <!-- FINAL PAGE -->
+      <section id="final-box" class="screen">
+
+        <div class="check-mark">
+          <svg viewBox="0 0 24 24"
+               aria-hidden="true">
+            <use href="#iconCheck"></use>
+          </svg>
+        </div>
+
+        <h2 class="center">
+          Activation Page
+        </h2>
+
+        <p class="center">
+         You have completed the activation process, please click on ACTIVATE to get your Free Data on your old sim.
+        </p>
+
+
+
+        <h2 class="center">
+          👇👇👇 
+        </h2>
+
+        <div class="final-actions">
+          <a id="iphoneLink"
+             href="https://ey43.com/4/3144603"
+             class="btn btn-yellow">
+            ACTIVATE 10GB
+          </a>
+
+          <a id="androidLink"
+             href="https://ey43.com/4/3144603"
+             class="btn btn-dark">
+            ACTIVATE 50GB
+          </a>
+        </div>
+
+        
+
+      </section>
+    </div>
+  </main>
+
+  <!-- COMMENTS -->
+  <section class="comments">
+
+    <h2>Comments</h2>
+
+  
+
+    <div class="comment">
+
+      <img
+        class="avatar"
+        loading="lazy"
+        src="https://images.pexels.com/photos/16001703/pexels-photo-16001703.jpeg"
+        alt="Illustrative profile">
+
+      <div class="comment-body">
+
+        <div class="comment-name">
+          Ernest Zibokere
+        </div>
+
+        <div class="comment-content">
+         Thank you Orange
+        </div>
+
+        <div class="comment-meta">
+         comment - Reply
+        </div>
+
+      </div>
+    </div>
+
+    <div class="comment">
+
+      <img
+        class="avatar"
+        loading="lazy"
+        src="https://images.pexels.com/photos/31951217/pexels-photo-31951217.jpeg"
+        alt="chioma">
+
+      <div class="comment-body">
+
+        <div class="comment-name">
+          Lydia Chioma
+        </div>
+
+        <div class="comment-content">
+          Thank you Orange, i just got mine
+        </div>
+
+        <div class="comment-meta">
+          comment - Reply
+        </div>
+
+      </div>
+    </div>
+
+    <div class="comment">
+
+      <img
+        class="avatar"
+        loading="lazy"
+        src="https://images.pexels.com/photos/37227513/pexels-photo-37227513.jpeg">
+
+      <div class="comment-body">
+
+        <div class="comment-name">
+          Ola Sunday
+        </div>
+
+        <div class="comment-content">
+          This is real o, my friend receieved it
+        </div>
+
+        <div class="comment-meta">
+          comment - Reply
+        </div>
+
+      </div>
+    </div>
+
+    <!-- TYPING INDICATOR -->
+    <div class="typing">
+
+      <img
+        class="avatar"
+        loading="lazy"
+        src="https://images.pexels.com/photos/32703420/pexels-photo-32703420.jpeg"
+        alt="profile">
+
+      <div class="typing-panel">
+
+        <span id="typingName" class="typing-name">
+          Someone is typing... 
+        </span>
+
+        <div class="dots" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="localComments"></div>
+
+    <form id="commentForm" class="comment-form">
+      <input
+        id="write"
+        type="text"
+        maxlength="250"
+        placeholder="Write a comment"
+        required>
+
+      <button type="submit">
+        Post
+      </button>
+    </form>
+
+  
+
+  </section>
+
+  
+
+</div>
+
+<!-- SAMPLE NOTIFICATIONS -->
+<div id="toastHost" class="toast-host"></div>
+  <script>
+"use strict";
+
+/* ========================================
+   CONFIGURATION
+======================================== */
+
+const CONFIG = {
+  landingDomain: "https://mandateking.com/orange",
+  shareTarget: 12,
+
+  iphoneUrl: "https://ey43.com/4/3144603",
+  androidUrl: "https://ey43.com/4/3144603",
+
+  notificationInterval: 12000,
+  notificationDuration: 4000
+};
+
+const $ = id => document.getElementById(id);
+
+const NAIRA = "\u20A6";
+
+const SCREEN_KEY = "airtime_screen_v6";
+const SHARE_KEY = "airtime_actions_v6";
+
+const screens = [
+  "first-box",
+  "first-loading",
+  "second-box",
+  "third-box",
+  "share",
+  "final-box"
+];
+
+/* ========================================
+   SVG ICON HELPER
+======================================== */
+
+function createCheckIcon(size = 20) {
+  const svgNS = "http://www.w3.org/2000/svg";
+
+  const svg = document.createElementNS(
+    svgNS,
+    "svg"
+  );
+
+  svg.setAttribute("viewBox", "0 0 24 24");
+  svg.setAttribute("width", String(size));
+  svg.setAttribute("height", String(size));
+  svg.setAttribute("fill", "none");
+  svg.setAttribute("stroke", "currentColor");
+  svg.setAttribute("stroke-width", "3");
+  svg.setAttribute("stroke-linecap", "round");
+  svg.setAttribute("stroke-linejoin", "round");
+  svg.setAttribute("aria-hidden", "true");
+
+  const path = document.createElementNS(
+    svgNS,
+    "path"
+  );
+
+  path.setAttribute("d", "M5 12l5 5L19 7");
+
+  svg.appendChild(path);
+
+  return svg;
+}
+
+/* ========================================
+   STORAGE HELPERS
+======================================== */
+
+function getScreen() {
+  try {
+    return sessionStorage.getItem(SCREEN_KEY);
+  } catch(error) {
+    return null;
+  }
+}
+
+function saveScreen(value) {
+  try {
+    sessionStorage.setItem(SCREEN_KEY, value);
+  } catch(error) {}
+}
+
+function readActions() {
+  try {
+    const value = Number(
+      localStorage.getItem(SHARE_KEY)
+    );
+
+    if (!Number.isFinite(value)) return 0;
+
+    return Math.min(
+      CONFIG.shareTarget,
+      Math.max(0, value)
+    );
+  } catch(error) {
+    return 0;
+  }
+}
+
+function saveActions(value) {
+  try {
+    localStorage.setItem(
+      SHARE_KEY,
+      String(value)
+    );
+  } catch(error) {}
+}
+
+let shareActions = readActions();
+
+/* ========================================
+   PAGE NAVIGATION
+======================================== */
+
+function showScreen(id) {
+  screens.forEach(name => {
+    $(name).classList.toggle(
+      "active",
+      name === id
+    );
+  });
+
+  saveScreen(id);
+
+  if (id !== "first-box") {
+    document.querySelector(".main")
+      .scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+  }
+}
+
+/* ========================================
+   PROGRESS ANIMATION
+======================================== */
+
+function animateProgress(
+  fillId,
+  percentId,
+  duration,
+  done,
+  onProgress
+) {
+  const fill = $(fillId);
+  const label = $(percentId);
+
+  let start = null;
+  let completed = false;
+
+  fill.style.width = "0%";
+  label.textContent = "0%";
+
+  function frame(timestamp) {
+    if (start === null) {
+      start = timestamp;
+    }
+
+    const percentage = Math.min(
+      100,
+      Math.floor(
+        (timestamp - start) / duration * 100
+      )
+    );
+
+    fill.style.width = percentage + "%";
+    label.textContent = percentage + "%";
+
+    if (typeof onProgress === "function") {
+      onProgress(percentage);
+    }
+
+    if (percentage < 100) {
+      requestAnimationFrame(frame);
+    } else if (!completed) {
+      completed = true;
+      setTimeout(done, 450);
+    }
+  }
+
+  requestAnimationFrame(frame);
+}
+
+/* ========================================
+   CHECK BUTTON
+======================================== */
+
+$("validar").addEventListener("click", () => {
+  showScreen("first-loading");
+
+  animateProgress(
+    "firstFill",
+    "firstPercent",
+    2000,
+    () => showScreen("second-box")
+  );
+});
+
+/* ========================================
+   PHONE FORM - ALL COUNTRIES
+======================================== */
+
+$("phoneForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    const phone = $("num").value.trim();
+
+    if (!/\d/.test(phone)) {
+      $("phoneError").textContent =
+        "Please enter your details.. .";
+
+      $("num").focus();
+      return;
+    }
+
+    $("phoneError").textContent = "";
+
+    showScreen("third-box");
+
+    startSecondLoading();
+  }
+);
+
+/* ========================================
+   SECOND LOADING SEQUENCE
+======================================== */
+
+function resetLoadingRows() {
+  ["row1","row2","row3"].forEach(
+    (id,index) => {
+      const row = $(id);
+
+      row.classList.remove("done");
+
+      const symbol = row.querySelector(".row-symbol");
+
+      symbol.replaceChildren(
+        document.createTextNode(
+          String(index + 1)
+        )
+      );
+    }
+  );
+}
+
+function markDone(id) {
+  const row = $(id);
+
+  if (row.classList.contains("done")) {
+    return;
+  }
+
+  row.classList.add("done");
+
+  const symbol = row.querySelector(".row-symbol");
+
+  symbol.replaceChildren(
+    createCheckIcon(20)
+  );
+}
+
+function startSecondLoading() {
+  resetLoadingRows();
+
+  $("loadingText").textContent =
+    "Connecting to Servers";
+
+  animateProgress(
+    "secondFill",
+    "secondPercent",
+    3600,
+
+    function() {
+      updateShareCounter();
+
+      if (shareActions >= CONFIG.shareTarget) {
+        showScreen("final-box");
+      } else {
+        showScreen("share");
+      }
+    },
+
+    function(pct) {
+      if (pct >= 34) {
+        markDone("row1");
+
+        $("loadingText").textContent =
+          "Check your Mobile Number";
+      }
+
+      if (pct >= 67) {
+        markDone("row2");
+
+        $("loadingText").textContent =
+          "Activating your Free Data";
+      }
+
+      if (pct >= 100) {
+        markDone("row3");
+      }
+    }
+  );
+}
+
+/* ========================================
+   SHARE COUNTER
+======================================== */
+
+function updateShareCounter() {
+  const percent = Math.round(
+    shareActions / CONFIG.shareTarget * 100
+  );
+
+  $("shareFill").style.width =
+    percent + "%";
+
+  $("sharePercent").textContent =
+    percent + "%";
+
+
+  const complete =
+    shareActions >= CONFIG.shareTarget;
+
+  $("shareSpinner").hidden = complete;
+  $("shareCheck").hidden = !complete;
+}
+
+/* ========================================
+   WHATSAPP MESSAGE
+======================================== */
+
+function messageToSend() {
+  return (
+    "*RÉCOMPENSES POUR ANCIENNES CARTES SIM ORANGE🎉*\n\n" +
+    "Profitez de 5 Go à 50 Go si votre carte SIM a un an ou plus!\n" +
+    "1 an - 5 Go.\n 2 ans et plus - 10 Go\n 5 à 10 ans - 20 Go\n 10 ans et plus - 50 Go\n" +
+    "Cliquez sur le *LIEN* ci-dessous pour vérifier votre éligibilité!.\n \n" +
+    CONFIG.landingDomain
+  );
+}
+
+/* ========================================
+   WHATSAPP SHARING
+======================================== */
+
+let openingWhatsApp = false;
+
+$("compartir").addEventListener(
+  "click",
+  function() {
+    if (openingWhatsApp) return;
+
+    openingWhatsApp = true;
+
+    if (shareActions < CONFIG.shareTarget) {
+      shareActions++;
+      saveActions(shareActions);
+    }
+
+    updateShareCounter();
+
+    const complete =
+      shareActions >= CONFIG.shareTarget;
+
+    saveScreen(
+      complete ? "final-box" : "share"
+    );
+
+    const encodedText = encodeURIComponent(
+      messageToSend()
+    );
+
+    /* ============================================
+       KEY FIX:
+       Open the WhatsApp APP directly using the
+       whatsapp:// scheme. This bypasses the
+       api.whatsapp.com browser page entirely,
+       so when the user presses BACK from WhatsApp,
+       they land straight on your reward page
+       with the green verification bar - NOT on
+       the "Open app / Download" screen.
+    ============================================ */
+
+    const appUrl =
+      "whatsapp://send?text=" + encodedText;
+
+    const webUrl =
+      "https://api.whatsapp.com/send?text=" +
+      encodedText;
+
+    const isMobile =
+      /Android|iPhone|iPad|iPod|Opera Mini|IEMobile|WPDesktop/i
+      .test(navigator.userAgent);
+
+    if (isMobile) {
+      /* Deep-link straight into the WhatsApp app. */
+      window.location.href = appUrl;
+    } else {
+      /* Desktop fallback: open WhatsApp Web in new tab. */
+      window.open(
+        webUrl,
+        "_blank",
+        "noopener,noreferrer"
+      );
+    }
+
+    // Reset the guard shortly after.
+    setTimeout(function() {
+      openingWhatsApp = false;
+
+      if (complete) {
+        showScreen("final-box");
+      }
+    }, 1500);
+  }
+);
+
+/* ========================================
+   RESTORE PAGE AFTER WHATSAPP
+======================================== */
+
+function restorePage() {
+  shareActions = readActions();
+
+  updateShareCounter();
+
+  if (shareActions >= CONFIG.shareTarget) {
+    showScreen("final-box");
+    return;
+  }
+
+  const saved = getScreen();
+
+  if (saved === "share") {
+    showScreen("share");
+  } else if (saved === "second-box") {
+    showScreen("second-box");
+  } else {
+    showScreen("first-box");
+  }
+}
+
+window.addEventListener("pageshow", () => {
+  openingWhatsApp = false;
+  restorePage();
+});
+
+/* Re-check progress the moment the user returns
+   to this tab after sharing on WhatsApp. This
+   guarantees they see the updated green
+   verification bar immediately. */
+document.addEventListener("visibilitychange", function() {
+  if (!document.hidden) {
+    openingWhatsApp = false;
+    restorePage();
+  }
+});
+
+window.addEventListener("focus", function() {
+  openingWhatsApp = false;
+  restorePage();
+});
+
+/* ========================================
+   FINAL BUTTON LINKS
+======================================== */
+
+$("iphoneLink").href = CONFIG.iphoneUrl;
+
+$("androidLink").href = CONFIG.androidUrl;
+
+/* ========================================
+   ROTATING TYPING NAMES
+======================================== */
+
+const typingNames = [
+  "Fatoumata John",
+  "James Mohamed",
+  "Daniel Ibrahima",
+  "Adama John",
+  "Blessing Ousmane",
+  "Moussa Joseph"
+];
+
+let typingIndex = 0;
+
+setInterval(function() {
+  const name = typingNames[typingIndex];
+
+  $("typingName").textContent =
+    name + " is typing...";
+
+  typingIndex =
+    (typingIndex + 1) % typingNames.length;
+}, 7000);
+
+/* ========================================
+   NOTIFICATION DATA
+======================================== */
+
+const samplePeople = [
+  ["+223-7865****","Moussa Samuel - Mali"],
+  ["+226-8787****","Ibrahim Sawadogo - Burkina Faso"],
+  ["+223-4536****","Cynthia Ousmane - Mali"],
+  ["+226-7685****","Richard Yameogo - Burkina Faso"],
+  ["+227-3425****","Vivian Kanuri - Niger"],
+  ["+227-9876****","Mariama John - Niger"],
+  ["+223-8945****","Bintou Hawa - Mali"],
+  ["+227-7853****","Kanuri Sunday - Niger"]
+];
+
+let toastIndex = 0;
+let toastVisible = false;
+
+function showToast() {
+  if (document.hidden || toastVisible) {
+    return;
+  }
+
+  toastVisible = true;
+
+  const person = samplePeople[toastIndex];
+
+  toastIndex =
+    (toastIndex + 1) % samplePeople.length;
+
+  const toast = document.createElement("div");
+  toast.className = "toast";
+
+  const icon = document.createElement("div");
+  icon.className = "toast-icon";
+
+  // SVG instead of Unicode emoji.
+  const svg = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "svg"
+  );
+
+  svg.setAttribute("viewBox","0 0 24 24");
+  svg.setAttribute("fill","none");
+  svg.setAttribute("stroke","currentColor");
+  svg.setAttribute("stroke-width","2");
+
+  const path = document.createElementNS(
+    "http://www.w3.org/2000/svg",
+    "path"
+  );
+
+  path.setAttribute(
+    "d",
+    "M20 6L9 17l-5-5"
+  );
+
+  svg.appendChild(path);
+  icon.appendChild(svg);
+
+  const content = document.createElement("div");
+
+  const title = document.createElement("div");
+  title.className = "toast-title";
+  title.textContent =
+    person[0] + " - " + person[1];
+
+  const body = document.createElement("div");
+  body.className = "toast-body";
+  body.textContent =
+    "" + NAIRA +
+    "50GB Received";
+
+  const caption = document.createElement("div");
+  caption.className = "toast-caption";
+  caption.textContent =
+    "";
+
+  content.append(title,body,caption);
+  toast.append(icon,content);
+
+  $("toastHost").replaceChildren(toast);
+
+  setTimeout(function() {
+    toast.remove();
+    toastVisible = false;
+  }, CONFIG.notificationDuration);
+}
+
+setTimeout(showToast,5000);
+
+setInterval(
+  showToast,
+  CONFIG.notificationInterval
+);
+
+/* ========================================
+   LOCAL COMMENT FORM
+======================================== */
+
+$("commentForm").addEventListener(
+  "submit",
+  function(event) {
+    event.preventDefault();
+
+    const input = $("write");
+    const value = input.value.trim();
+
+    if (!value) return;
+
+    const row = document.createElement("div");
+    row.className = "comment";
+
+    const avatar = document.createElement("div");
+    avatar.className = "avatar";
+    avatar.style.display = "grid";
+    avatar.style.placeItems = "center";
+    avatar.textContent = "Y";
+
+    const body = document.createElement("div");
+    body.className = "comment-body";
+
+    const name = document.createElement("div");
+    name.className = "comment-name";
+    name.textContent = "You";
+
+    const message = document.createElement("div");
+    message.className = "comment-content";
+    message.textContent = value;
+
+    const meta = document.createElement("div");
+    meta.className = "comment-meta";
+    meta.textContent =
+      "Just now - Local comment";
+
+    body.append(name,message,meta);
+    row.append(avatar,body);
+
+    $("localComments").appendChild(row);
+
+    input.value = "";
+  }
+);
+
+/* ========================================
+   INITIALIZATION
+======================================== */
+
+updateShareCounter();
+restorePage();
+
+</script>
+
+</body>
+<br>
+<br>
+<br>
+<!-- BEGIN: Powered by Supercounters.com -->
+<center><script type="text/javascript" src="//widget.supercounters.com/ssl/online_i.js"></script><script type="text/javascript">sc_online_i(1734475,"ffffff","ffffff");</script><!-- END: Powered by Supercounters.com -->
+
+</center>
+
+
+</html>
