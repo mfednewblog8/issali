@@ -721,32 +721,7 @@ President John Dramani Mahama Birthday Celebration Offer | 10GB Free Data and GH
             </a><br/>
 
         </div>
-         <p id="offer-date"></p>
-
-<script>
-  function updateOfferDate() {
-    const tomorrow = new Date();
-    tomorrow.setDate(tomorrow.getDate() + 2);
-
-    const day = tomorrow.getDate();
-    const month = tomorrow.toLocaleString('en-GB', {
-      month: 'long'
-    });
-
-    let suffix = 'th';
-
-    if (day % 100 < 11 || day % 100 > 13) {
-      if (day % 10 === 1) suffix = 'st';
-      else if (day % 10 === 2) suffix = 'nd';
-      else if (day % 10 === 3) suffix = 'rd';
-    }
-
-    document.getElementById('offer-date').textContent =
-      `Ending ${day}${suffix} ${month}`;
-  }
-
-  updateOfferDate();
-</script>
+        
 
         <div class="comments">
             <div class="counter">
